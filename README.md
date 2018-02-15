@@ -10,7 +10,7 @@ Navigate to [shell.azure.com](https://shell.azure.com/)
 
 ```bash
 az account list
-
+az account list -o table
 az account list | jq '.[] | .id + " " + .name'
 
 az account set --subscription 724467b5-bee4-484b-bf13-d6a5505d2b51
@@ -48,6 +48,8 @@ az group deployment create \
 - [deploy #03-public-ip-variables](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchgeuer%2Fsaphec_azure_arm_training%2Fmaster%2F03-public-ip-variables.json)
 - [deploy #04-public-ip-function-resource-group](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchgeuer%2Fsaphec_azure_arm_training%2Fmaster%2F04-public-ip-function-resource-group.json)
 - [deploy #05-public-ip-function-concat](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchgeuer%2Fsaphec_azure_arm_training%2Fmaster%2F05-public-ip-function-concat.json)
+- [deploy #06-nested-variables](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchgeuer%2Fsaphec_azure_arm_training%2Fmaster%2F06-nested-variables.json)
+- [deploy #07-constrained-parameters](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchgeuer%2Fsaphec_azure_arm_training%2Fmaster%2F07-constrained-parameters.json)
 
 
 ## Links
@@ -55,3 +57,10 @@ az group deployment create \
 - https://portal.azure.com/
 - https://resources.azure.com/
 - https://shell.azure.com/
+
+
+
+
+## Command line inspiration
+
+- list all resource groups: `az group list | jq '.[] | .location + " - " + .name'`
