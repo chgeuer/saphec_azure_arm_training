@@ -33,27 +33,6 @@
 	},
 	"resources": [
 		{
-			"type": "Microsoft.Network/virtualNetworks",
-			"apiVersion": "[variables('apiVersion').virtualNetworks]",
-			"name": "[concat(variables('deploymentName'), '-vnet')]",
-			"location": "[resourceGroup().location]",
-			"properties": {
-				"addressSpace": {
-					"addressPrefixes": [
-						"[variables('vnet').addresses.addressSpace]"
-					]
-				},
-				"subnets": [
-					{
-						"name": "[concat(variables('deploymentName'), '-subnet-jumphost')]",
-						"properties": {
-							"addressPrefix": "[variables('vnet').addresses.subnet.jumphost]"
-						}
-					}
-				]
-			}
-		},
-		{
 			"type": "Microsoft.Network/networkSecurityGroups",
 			"apiVersion": "[variables('apiVersion').networkSecurityGroups]",
 			"location": "[resourceGroup().location]",
@@ -75,6 +54,30 @@
 							"sourcePortRange": "*",
 							"destinationAddressPrefix": "[variables('vnet').addresses.subnet.jumphost]",
 							"destinationPortRange": "22"
+						}
+					}
+				]
+			}
+		},
+		{
+			"type": "Microsoft.Network/virtualNetworks",
+			"apiVersion": "[variables('apiVersion').virtualNetworks]",
+			"name": "[concat(variables('deploymentName'), '-vnet')]",
+			"location": "[resourceGroup().location]",
+			"dependsOn": [
+				"[concat('Microsoft.Network/networkSecurityGroups/', concat(variables('deploymentName'), '-nsg-jumphost'))]"
+			],
+			"properties": {
+				"addressSpace": {
+					"addressPrefixes": [
+						"[variables('vnet').addresses.addressSpace]"
+					]
+				},
+				"subnets": [
+					{
+						"name": "[concat(variables('deploymentName'), '-subnet-jumphost')]",
+						"properties": {
+							"addressPrefix": "[variables('vnet').addresses.subnet.jumphost]"
 						}
 					}
 				]

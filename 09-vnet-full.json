@@ -26,33 +26,15 @@
 			"addresses": {
 				"addressSpace": "10.0.0.0/16",
 				"subnet": {
-					"jumphost": "10.0.1.0/24"
+					"jumphost": "10.0.1.0/24",
+					"frontend": "10.0.2.0/24",
+					"database": "10.0.3.0/24",
+					"gatewaysubnet": "10.0.250.0/24"
 				}
 			}
 		}
 	},
 	"resources": [
-		{
-			"type": "Microsoft.Network/virtualNetworks",
-			"apiVersion": "[variables('apiVersion').virtualNetworks]",
-			"name": "[concat(variables('deploymentName'), '-vnet')]",
-			"location": "[resourceGroup().location]",
-			"properties": {
-				"addressSpace": {
-					"addressPrefixes": [
-						"[variables('vnet').addresses.addressSpace]"
-					]
-				},
-				"subnets": [
-					{
-						"name": "[concat(variables('deploymentName'), '-subnet-jumphost')]",
-						"properties": {
-							"addressPrefix": "[variables('vnet').addresses.subnet.jumphost]"
-						}
-					}
-				]
-			}
-		},
 		{
 			"type": "Microsoft.Network/networkSecurityGroups",
 			"apiVersion": "[variables('apiVersion').networkSecurityGroups]",
@@ -75,6 +57,119 @@
 							"sourcePortRange": "*",
 							"destinationAddressPrefix": "[variables('vnet').addresses.subnet.jumphost]",
 							"destinationPortRange": "22"
+						}
+					}
+				]
+			}
+		},
+		{
+			"type": "Microsoft.Network/networkSecurityGroups",
+			"apiVersion": "[variables('apiVersion').networkSecurityGroups]",
+			"location": "[resourceGroup().location]",
+			"name": "[concat(variables('deploymentName'), '-nsg-frontend')]",
+			"tags": {
+				"displayName": "NetworkSecurityGroup"
+			},
+			"properties": {
+				"securityRules": [
+					{
+						"name": "http-in",
+						"properties": {
+							"priority": 100,
+							"description": "Allow TCP/80 Inbound",
+							"access": "Allow",
+							"direction": "Inbound",
+							"protocol": "Tcp",
+							"sourceAddressPrefix": "Internet",
+							"sourcePortRange": "*",
+							"destinationAddressPrefix": "[variables('vnet').addresses.subnet.frontend]",
+							"destinationPortRange": "80"
+						}
+					},
+					{
+						"name": "https-in",
+						"properties": {
+							"priority": 101,
+							"description": "Allow TCP/443 Inbound",
+							"access": "Allow",
+							"direction": "Inbound",
+							"protocol": "Tcp",
+							"sourceAddressPrefix": "Internet",
+							"sourcePortRange": "*",
+							"destinationAddressPrefix": "[variables('vnet').addresses.subnet.frontend]",
+							"destinationPortRange": "443"
+						}
+					}
+				]
+			}
+		},
+		{
+			"type": "Microsoft.Network/networkSecurityGroups",
+			"apiVersion": "[variables('apiVersion').networkSecurityGroups]",
+			"location": "[resourceGroup().location]",
+			"name": "[concat(variables('deploymentName'), '-nsg-database')]",
+			"tags": {
+				"displayName": "NetworkSecurityGroup"
+			},
+			"properties": {
+				"securityRules": [
+					{
+						"name": "database-in",
+						"properties": {
+							"priority": 100,
+							"description": "Allow TCP/80 Inbound",
+							"access": "Allow",
+							"direction": "Inbound",
+							"protocol": "Tcp",
+							"sourceAddressPrefix": "[variables('vnet').addresses.subnet.frontend]",
+							"sourcePortRange": "*",
+							"destinationAddressPrefix": "[variables('vnet').addresses.subnet.database]",
+							"destinationPortRange": "80"
+						}
+					}
+				]
+			}
+		},
+		{
+			"type": "Microsoft.Network/virtualNetworks",
+			"apiVersion": "[variables('apiVersion').virtualNetworks]",
+			"name": "[concat(variables('deploymentName'), '-vnet')]",
+			"location": "[resourceGroup().location]",
+			"dependsOn": [
+				"[concat('Microsoft.Network/networkSecurityGroups/', concat(variables('deploymentName'), '-nsg-jumphost'))]",
+				"[concat('Microsoft.Network/networkSecurityGroups/', concat(variables('deploymentName'), '-nsg-frontend'))]",
+				"[concat('Microsoft.Network/networkSecurityGroups/', concat(variables('deploymentName'), '-nsg-database'))]",
+				"[concat('Microsoft.Network/networkSecurityGroups/', 'gatewaysubnet')]"
+			],
+			"properties": {
+				"addressSpace": {
+					"addressPrefixes": [
+						"[variables('vnet').addresses.addressSpace]"
+					]
+				},
+				"subnets": [
+					{
+						"name": "[concat(variables('deploymentName'), '-subnet-jumphost')]",
+						"properties": {
+							"addressPrefix": "[variables('vnet').addresses.subnet.jumphost]"
+						}
+					},
+					{
+						"name": "[concat(variables('deploymentName'), '-subnet-frontend')]",
+						"properties": {
+							"addressPrefix": "[variables('vnet').addresses.subnet.frontend]"
+						}
+					},
+					{
+						"name": "[concat(variables('deploymentName'), '-subnet-database')]",
+						"properties": {
+							"addressPrefix": "[variables('vnet').addresses.subnet.database]"
+						}
+					},
+					{
+						"name": "gatewaysubnet",
+						"properties": {
+							"addressPrefix": "[variables('vnet').addresses.subnet.gatewaysubnet]"
 						}
 					}
 				]
