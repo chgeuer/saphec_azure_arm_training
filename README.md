@@ -1,5 +1,33 @@
 # Hands-on labs
 
+## Before we start the fun
+
+### Get a shell
+
+Navigate to [shell.azure.com](https://shell.azure.com/)
+
+### Select the right subscription
+
+```bash
+az account list
+
+az account list | jq '.[] | .id + " " + .name'
+
+az account set --subscription 724467b5-bee4-484b-bf13-d6a5505d2b51
+```
+
+### Create a resource group
+
+```bash
+az group create --name christiandemo1 --location westeurope
+```
+
+### Fetch the demo
+
+```bash
+git clone https://github.com/chgeuer/saphec_azure_arm_training && cd saphec_azure_arm_training
+```
+
 ## Deployments
 
 - [deploy #00-empty](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchgeuer%2Fsaphec_azure_arm_training%2Fmaster%2F00-empty.json)
