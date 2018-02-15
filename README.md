@@ -58,6 +58,7 @@ az group deployment create \
 - https://portal.azure.com/
 - https://resources.azure.com/
 - https://shell.azure.com/
+- https://github.com/azure/azure-quickstart-templates/
 
 ## Command line inspiration
 

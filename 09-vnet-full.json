@@ -138,9 +138,11 @@
 			"dependsOn": [
 				"[concat('Microsoft.Network/networkSecurityGroups/', concat(variables('deploymentName'), '-nsg-jumphost'))]",
 				"[concat('Microsoft.Network/networkSecurityGroups/', concat(variables('deploymentName'), '-nsg-frontend'))]",
-				"[concat('Microsoft.Network/networkSecurityGroups/', concat(variables('deploymentName'), '-nsg-database'))]",
-				"[concat('Microsoft.Network/networkSecurityGroups/', 'gatewaysubnet')]"
+				"[concat('Microsoft.Network/networkSecurityGroups/', concat(variables('deploymentName'), '-nsg-database'))]"
 			],
+			"tags": {
+				"displayName": "A virtual network"
+			},
 			"properties": {
 				"addressSpace": {
 					"addressPrefixes": [
@@ -151,19 +153,28 @@
 					{
 						"name": "[concat(variables('deploymentName'), '-subnet-jumphost')]",
 						"properties": {
-							"addressPrefix": "[variables('vnet').addresses.subnet.jumphost]"
+							"addressPrefix": "[variables('vnet').addresses.subnet.jumphost]",
+							"networkSecurityGroup": {
+								"id": "[resourceId('Microsoft.Network/networkSecurityGroups', concat(variables('deploymentName'), '-nsg-jumphost'))]"
+							}
 						}
 					},
 					{
 						"name": "[concat(variables('deploymentName'), '-subnet-frontend')]",
 						"properties": {
-							"addressPrefix": "[variables('vnet').addresses.subnet.frontend]"
+							"addressPrefix": "[variables('vnet').addresses.subnet.frontend]",
+							"networkSecurityGroup": {
+								"id": "[resourceId('Microsoft.Network/networkSecurityGroups', concat(variables('deploymentName'), '-nsg-frontend'))]"
+							}
 						}
 					},
 					{
 						"name": "[concat(variables('deploymentName'), '-subnet-database')]",
 						"properties": {
-							"addressPrefix": "[variables('vnet').addresses.subnet.database]"
+							"addressPrefix": "[variables('vnet').addresses.subnet.database]",
+							"networkSecurityGroup": {
+								"id": "[resourceId('Microsoft.Network/networkSecurityGroups', concat(variables('deploymentName'), '-nsg-database'))]"
+							}
 						}
 					},
 					{
