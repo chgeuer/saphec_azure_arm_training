@@ -34,7 +34,7 @@
 	"resources": [
 		{
 			"type": "Microsoft.Network/virtualNetworks",
-			"apiVersion": "[variables('apiVersions').virtualNetworks]",
+			"apiVersion": "[variables('apiVersion').virtualNetworks]",
 			"name": "[concat(variables('deploymentName'), '-vnet')]",
 			"location": "[resourceGroup().location]",
 			"properties": {
@@ -55,7 +55,7 @@
 		},
 		{
 			"type": "Microsoft.Network/networkSecurityGroups",
-			"apiVersion": "[variables('apiVersions').networkSecurityGroups]",
+			"apiVersion": "[variables('apiVersion').networkSecurityGroups]",
 			"location": "[resourceGroup().location]",
 			"name": "[concat(variables('deploymentName'), '-nsg-jumphost')]",
 			"tags": {
