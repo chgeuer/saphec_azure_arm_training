@@ -50,7 +50,8 @@ az group deployment create \
 - [deploy #05-public-ip-function-concat](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchgeuer%2Fsaphec_azure_arm_training%2Fmaster%2F05-public-ip-function-concat.json)
 - [deploy #06-nested-variables](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchgeuer%2Fsaphec_azure_arm_training%2Fmaster%2F06-nested-variables.json)
 - [deploy #07-constrained-parameters](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchgeuer%2Fsaphec_azure_arm_training%2Fmaster%2F07-constrained-parameters.json)
-- [deploy #08-vnet](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchgeuer%2Fsaphec_azure_arm_training%2Fmaster%2F08-vnet.json)
+- [deploy #08-vnet-dependsOn](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchgeuer%2Fsaphec_azure_arm_training%2Fmaster%2F08-vnet-dependsOn.json)
+- [deploy #09-vnet-full](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchgeuer%2Fsaphec_azure_arm_training%2Fmaster%2F09-vnet-full.json)
 
 ## Links
 
