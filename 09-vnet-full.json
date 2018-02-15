@@ -1,0 +1,84 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"deploymentName": {
+			"type": "string",
+			"defaultValue": "chgeuer123"
+		}, 
+		"ipAddressSKU": {
+			"type": "string",
+			"allowedValues": [
+				"Basic",
+				"Standard"
+			], 
+			"defaultValue": "Basic"
+		}
+	},
+	"variables": {
+		"deploymentName": "[parameters('deploymentName')]",
+		"apiVersion": {
+			"publicIPAddresses": "2017-08-01",
+			"networkSecurityGroups": "2017-06-01",
+			"virtualNetworks": "2017-08-01"
+		},
+		"vnet": {
+			"addresses": {
+				"addressSpace": "10.0.0.0/16",
+				"subnet": {
+					"jumphost": "10.0.1.0/24"
+				}
+			}
+		}
+	},
+	"resources": [
+		{
+			"type": "Microsoft.Network/virtualNetworks",
+			"apiVersion": "[variables('apiVersion').virtualNetworks]",
+			"name": "[concat(variables('deploymentName'), '-vnet')]",
+			"location": "[resourceGroup().location]",
+			"properties": {
+				"addressSpace": {
+					"addressPrefixes": [
+						"[variables('vnet').addresses.addressSpace]"
+					]
+				},
+				"subnets": [
+					{
+						"name": "[concat(variables('deploymentName'), '-subnet-jumphost')]",
+						"properties": {
+							"addressPrefix": "[variables('vnet').addresses.subnet.jumphost]"
+						}
+					}
+				]
+			}
+		},
+		{
+			"type": "Microsoft.Network/networkSecurityGroups",
+			"apiVersion": "[variables('apiVersion').networkSecurityGroups]",
+			"location": "[resourceGroup().location]",
+			"name": "[concat(variables('deploymentName'), '-nsg-jumphost')]",
+			"tags": {
+				"displayName": "NetworkSecurityGroup"
+			},
+			"properties": {
+				"securityRules": [
+					{
+						"name": "ssh-in",
+						"properties": {
+							"priority": 100,
+							"description": "Allow TCP/22 Inbound",
+							"access": "Allow",
+							"direction": "Inbound",
+							"protocol": "Tcp",
+							"sourceAddressPrefix": "Internet",
+							"sourcePortRange": "*",
+							"destinationAddressPrefix": "[variables('vnet').addresses.subnet.jumphost]",
+							"destinationPortRange": "22"
+						}
+					}
+				]
+			}
+		}
+	]
+}
