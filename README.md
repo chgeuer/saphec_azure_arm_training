@@ -19,13 +19,25 @@ az account set --subscription 724467b5-bee4-484b-bf13-d6a5505d2b51
 ### Create a resource group
 
 ```bash
-az group create --name christiandemo1 --location westeurope
+rgname="$(whoami)"
+location=westeurope
+
+az group create --name "${rgname}" --location "${location}"
 ```
 
 ### Fetch the demo
 
 ```bash
 git clone https://github.com/chgeuer/saphec_azure_arm_training && cd saphec_azure_arm_training
+```
+
+### Deploy template from command line
+
+```bash
+az group deployment create \
+   --resource-group "${rgname}" \
+   --template-file 05-public-ip-function-concat.json \
+   --parameters deploymentName=foo
 ```
 
 ## Deployments
