@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"ipName": {
+			"type": "string",
+			"defaultValue": "someip"
+		},
+		"domainNameLabel": {
+			"type": "string",
+			"defaultValue": "chgeuertest1"
+		}
+	},
+	"variables": {
+		"publicIPAddressesAPIVersion": "2017-08-01"
+	},
+	"resources": [
+		{
+			"type": "Microsoft.Network/publicIPAddresses",
+			"apiVersion": "[variables('publicIPAddressesAPIVersion')]",
+			"name": "[parameters('ipName')]",
+			"location": "[resourceGroup().location]",
+			"sku": {
+				"name": "Basic"
+			},
+			"properties": {
+				"publicIPAllocationMethod": "Dynamic",
+				"idleTimeoutInMinutes": 4,
+				"publicIpAddressVersion": 4,
+				"dnsSettings": {
+					"domainNameLabel": "[parameters('domainNameLabel')]"
+				}
+			}
+		}
+	]
+}
