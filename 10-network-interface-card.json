@@ -1,0 +1,217 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"deploymentName": {
+			"type": "string",
+			"defaultValue": "chgeuer123"
+		}, 
+		"ipAddressSKU": {
+			"type": "string",
+			"allowedValues": [
+				"Basic",
+				"Standard"
+			], 
+			"defaultValue": "Basic"
+		}
+	},
+	"variables": {
+		"deploymentName": "[parameters('deploymentName')]",
+		"apiVersion": {
+			"publicIPAddresses": "2017-08-01",
+			"networkSecurityGroups": "2017-06-01",
+			"virtualNetworks": "2017-08-01"
+		},
+		"vnet": {
+			"addresses": {
+				"addressSpace": "10.0.0.0/16",
+				"subnet": {
+					"jumphost": "10.0.1.0/24",
+					"frontend": "10.0.2.0/24",
+					"database": "10.0.3.0/24",
+					"gatewaysubnet": "10.0.250.0/24"
+				}
+			}
+		}
+	},
+	"resources": [
+		{
+			"type": "Microsoft.Network/networkSecurityGroups",
+			"apiVersion": "[variables('apiVersion').networkSecurityGroups]",
+			"location": "[resourceGroup().location]",
+			"name": "[concat(variables('deploymentName'), '-nsg-jumphost')]",
+			"tags": {
+				"displayName": "NetworkSecurityGroup"
+			},
+			"properties": {
+				"securityRules": [
+					{
+						"name": "ssh-in",
+						"properties": {
+							"priority": 100,
+							"description": "Allow TCP/22 Inbound",
+							"access": "Allow",
+							"direction": "Inbound",
+							"protocol": "Tcp",
+							"sourceAddressPrefix": "Internet",
+							"sourcePortRange": "*",
+							"destinationAddressPrefix": "[variables('vnet').addresses.subnet.jumphost]",
+							"destinationPortRange": "22"
+						}
+					}
+				]
+			}
+		},
+		{
+			"type": "Microsoft.Network/networkSecurityGroups",
+			"apiVersion": "[variables('apiVersion').networkSecurityGroups]",
+			"location": "[resourceGroup().location]",
+			"name": "[concat(variables('deploymentName'), '-nsg-frontend')]",
+			"tags": {
+				"displayName": "NetworkSecurityGroup"
+			},
+			"properties": {
+				"securityRules": [
+					{
+						"name": "http-in",
+						"properties": {
+							"priority": 100,
+							"description": "Allow TCP/80 Inbound",
+							"access": "Allow",
+							"direction": "Inbound",
+							"protocol": "Tcp",
+							"sourceAddressPrefix": "Internet",
+							"sourcePortRange": "*",
+							"destinationAddressPrefix": "[variables('vnet').addresses.subnet.frontend]",
+							"destinationPortRange": "80"
+						}
+					},
+					{
+						"name": "https-in",
+						"properties": {
+							"priority": 101,
+							"description": "Allow TCP/443 Inbound",
+							"access": "Allow",
+							"direction": "Inbound",
+							"protocol": "Tcp",
+							"sourceAddressPrefix": "Internet",
+							"sourcePortRange": "*",
+							"destinationAddressPrefix": "[variables('vnet').addresses.subnet.frontend]",
+							"destinationPortRange": "443"
+						}
+					}
+				]
+			}
+		},
+		{
+			"type": "Microsoft.Network/networkSecurityGroups",
+			"apiVersion": "[variables('apiVersion').networkSecurityGroups]",
+			"location": "[resourceGroup().location]",
+			"name": "[concat(variables('deploymentName'), '-nsg-database')]",
+			"tags": {
+				"displayName": "NetworkSecurityGroup"
+			},
+			"properties": {
+				"securityRules": [
+					{
+						"name": "database-in",
+						"properties": {
+							"priority": 100,
+							"description": "Allow TCP/80 Inbound",
+							"access": "Allow",
+							"direction": "Inbound",
+							"protocol": "Tcp",
+							"sourceAddressPrefix": "[variables('vnet').addresses.subnet.frontend]",
+							"sourcePortRange": "*",
+							"destinationAddressPrefix": "[variables('vnet').addresses.subnet.database]",
+							"destinationPortRange": "80"
+						}
+					}
+				]
+			}
+		},
+		{
+			"type": "Microsoft.Network/virtualNetworks",
+			"apiVersion": "[variables('apiVersion').virtualNetworks]",
+			"name": "[concat(variables('deploymentName'), '-vnet')]",
+			"location": "[resourceGroup().location]",
+			"dependsOn": [
+				"[concat('Microsoft.Network/networkSecurityGroups/', concat(variables('deploymentName'), '-nsg-jumphost'))]",
+				"[concat('Microsoft.Network/networkSecurityGroups/', concat(variables('deploymentName'), '-nsg-frontend'))]",
+				"[concat('Microsoft.Network/networkSecurityGroups/', concat(variables('deploymentName'), '-nsg-database'))]"
+			],
+			"tags": {
+				"displayName": "A virtual network"
+			},
+			"properties": {
+				"addressSpace": {
+					"addressPrefixes": [
+						"[variables('vnet').addresses.addressSpace]"
+					]
+				},
+				"subnets": [
+					{
+						"name": "[concat(variables('deploymentName'), '-subnet-jumphost')]",
+						"properties": {
+							"addressPrefix": "[variables('vnet').addresses.subnet.jumphost]",
+							"networkSecurityGroup": {
+								"id": "[resourceId('Microsoft.Network/networkSecurityGroups', concat(variables('deploymentName'), '-nsg-jumphost'))]"
+							}
+						}
+					},
+					{
+						"name": "[concat(variables('deploymentName'), '-subnet-frontend')]",
+						"properties": {
+							"addressPrefix": "[variables('vnet').addresses.subnet.frontend]",
+							"networkSecurityGroup": {
+								"id": "[resourceId('Microsoft.Network/networkSecurityGroups', concat(variables('deploymentName'), '-nsg-frontend'))]"
+							}
+						}
+					},
+					{
+						"name": "[concat(variables('deploymentName'), '-subnet-database')]",
+						"properties": {
+							"addressPrefix": "[variables('vnet').addresses.subnet.database]",
+							"networkSecurityGroup": {
+								"id": "[resourceId('Microsoft.Network/networkSecurityGroups', concat(variables('deploymentName'), '-nsg-database'))]"
+							}
+						}
+					},
+					{
+						"name": "gatewaysubnet",
+						"properties": {
+							"addressPrefix": "[variables('vnet').addresses.subnet.gatewaysubnet]"
+						}
+					}
+				]
+			}
+		},
+		{
+			"type": "Microsoft.Network/networkInterfaces",
+			"name": "[concat(variables('deploymentName'), '-nic-jumphost')]",
+			"apiVersion": "2016-09-01",
+			"location": "[resourceGroup().location]",
+			"dependsOn": [
+				"[concat('Microsoft.Network/virtualNetworks/', concat(variables('deploymentName'), '-vnet'))]"
+			],
+			"tags": {
+				"displayName": "NIC Jumphost"
+			},
+			"properties": {
+				"ipConfigurations": [
+					{
+						"name": "ipconfig1",
+						"properties": {
+							"privateIpAddressVersion": "IPv4",
+							"privateIpAddress": "10.0.1.10",
+							"privateIPAllocationMethod": "Static",
+							"subnet": {
+								"id": "[concat(resourceId('Microsoft.Network/virtualNetworks', concat(variables('deploymentName'), '-vnet')), '/subnets/', concat(variables('deploymentName'), '-subnet-jumphost'))]"
+							}
+						}
+					}
+				]
+			}
+		}
+	]
+}

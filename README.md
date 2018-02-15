@@ -60,6 +60,12 @@ az group deployment create \
 - https://shell.azure.com/
 - https://github.com/azure/azure-quickstart-templates/
 
+## Docs
+
+- [ARM Language](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates)
+- [Network RP](https://docs.microsoft.com/en-us/azure/virtual-network/resource-groups-networking)
+
+
 ## Command line inspiration
 
 - list all resource groups: `az group list | jq '.[] | .location + " - " + .name'`
