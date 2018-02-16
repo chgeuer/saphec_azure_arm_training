@@ -55,6 +55,7 @@ az group deployment create \
 - [deploy #10-network-interface-card](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchgeuer%2Fsaphec_azure_arm_training%2Fmaster%2F10-network-interface-card.json)
 - [deploy #11-connect-public-ip-to-jumphost](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchgeuer%2Fsaphec_azure_arm_training%2Fmaster%2F11-connect-public-ip-to-jumphost.json)
 - [deploy #12-connect-vm-to-nic](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchgeuer%2Fsaphec_azure_arm_training%2Fmaster%2F12-connect-vm-to-nic.json)
+- [deploy #13-diagnostics-vm](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchgeuer%2Fsaphec_azure_arm_training%2Fmaster%2F13-diagnostics-vm.json)
 
 ## Links
 

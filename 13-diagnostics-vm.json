@@ -1,0 +1,207 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"deploymentName": {
+			"type": "string",
+			"defaultValue": "chgeuer123"
+		},
+		"adminSshKey": {
+			"type": "string",
+			"defaultValue": "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAk/ViUPrGp7KoJLuN2PgofgMyw7SN9zfLYFDDR0TRYa8cOvJlE8NdZYt6Oqa4aL/fslKr9bmlMCdawhZRL7sHccIIS0I0zG7iD15rQL3/Y5aZOf3ML+bebpSj+SE5OeHT9iobgsYpK8gq72d8tmZZAfKhx6fRJsgC2j2xXH/GveoZ5GkHnhJUYuYPmNjEb/PK7LT43XuP+E9Rderr3LPUTuBeGVW9do0HS7X8I2uTn0+BqgkZLOO4FCnSXxh1u6fuD++ZgOZVmB6Q1xEdHSA7LLnPkjDZqbWezLIh5cSdNPUW2JG7tMxQTAZzVoNMb6vAVsfslB16rqZQ21EdIq+0pw== chgeuer-dcos-1"
+		}, 
+		"diskResourceGroup": {
+			"type": "string"
+		},
+		"diskName": {
+			"type": "string"
+		}
+	},
+	"variables": {
+		"adminUserName": "chgeuer",
+		"adminSshKey": "[parameters('adminSshKey')]",
+		"deploymentName": "[parameters('deploymentName')]",
+		"apiVersion": {
+			"publicIPAddresses": "2017-08-01",
+			"networkSecurityGroups": "2017-06-01",
+			"virtualNetworks": "2017-08-01"
+		},
+		"vm": {
+			"os": {
+				"publisher": "SUSE",
+				"offer": "openSUSE-Leap",
+				"sku": "42.3",
+				"version": "latest"
+			},
+			"size": {
+				"diag": "Standard_D2s_v3"
+			}
+		},
+		"vnet": {
+			"addresses": {
+				"addressSpace": "10.0.0.0/16",
+				"subnetPrefix": {
+					"diag": "10.0.1."
+				},
+				"subnet": {
+					"diag": "10.0.1.0/24"
+				}
+			}
+		}
+	},
+	"resources": [
+		{
+			"type": "Microsoft.Network/networkSecurityGroups",
+			"apiVersion": "[variables('apiVersion').networkSecurityGroups]",
+			"location": "[resourceGroup().location]",
+			"name": "[concat(variables('deploymentName'), '-nsg-diag')]",
+			"tags": {
+				"displayName": "NetworkSecurityGroup"
+			},
+			"properties": {
+				"securityRules": [
+					{
+						"name": "ssh-in",
+						"properties": {
+							"priority": 100,
+							"description": "Allow TCP/22 Inbound",
+							"access": "Allow",
+							"direction": "Inbound",
+							"protocol": "Tcp",
+							"sourceAddressPrefix": "Internet",
+							"sourcePortRange": "*",
+							"destinationAddressPrefix": "[variables('vnet').addresses.subnet.diag]",
+							"destinationPortRange": "22"
+						}
+					}
+				]
+			}
+		},
+		{
+			"type": "Microsoft.Network/virtualNetworks",
+			"apiVersion": "[variables('apiVersion').virtualNetworks]",
+			"name": "[concat(variables('deploymentName'), '-vnet')]",
+			"location": "[resourceGroup().location]",
+			"dependsOn": [
+				"[concat('Microsoft.Network/networkSecurityGroups/', concat(variables('deploymentName'), '-nsg-diag'))]"
+			],
+			"tags": {
+				"displayName": "A virtual network for the diagnostics VM"
+			},
+			"properties": {
+				"addressSpace": {
+					"addressPrefixes": [
+						"[variables('vnet').addresses.addressSpace]"
+					]
+				},
+				"subnets": [
+					{
+						"name": "[concat(variables('deploymentName'), '-subnet-diag')]",
+						"properties": {
+							"addressPrefix": "[variables('vnet').addresses.subnet.diag]",
+							"networkSecurityGroup": {
+								"id": "[resourceId('Microsoft.Network/networkSecurityGroups', concat(variables('deploymentName'), '-nsg-diag'))]"
+							}
+						}
+					}
+				]
+			}
+		},
+		{
+			"type": "Microsoft.Network/publicIPAddresses",
+			"apiVersion": "[variables('apiVersion').publicIPAddresses]",
+			"name": "[concat(variables('deploymentName'), '-publicip-diag')]",
+			"tags": {
+				"displayName": "PublicIP Diagnostics VM"
+			},
+			"location": "[resourceGroup().location]",
+			"sku": { "name": "Standard" },
+			"properties": {
+				"publicIPAllocationMethod": "Static",
+				"idleTimeoutInMinutes": 30,
+				"publicIpAddressVersion": 4,
+				"dnsSettings": {
+					"domainNameLabel": "[concat(variables('deploymentName'), '-diagnostics-ssh')]"
+				}
+			}
+		},
+		{
+			"type": "Microsoft.Network/networkInterfaces",
+			"name": "[concat(variables('deploymentName'), '-nic-diag')]",
+			"apiVersion": "2016-09-01",
+			"location": "[resourceGroup().location]",
+			"dependsOn": [
+				"[concat('Microsoft.Network/virtualNetworks/', concat(variables('deploymentName'), '-vnet'))]",
+				"[concat('Microsoft.Network/publicIPAddresses/', concat(variables('deploymentName'), '-publicip-diag'))]"
+			],
+			"tags": { "displayName": "NIC Diagnostics VM" },
+			"properties": {
+				"ipConfigurations": [
+					{
+						"name": "ipconfig1",
+						"properties": {
+							"privateIpAddressVersion": "IPv4",
+							"privateIpAddress": "[concat(variables('vnet').addresses.subnetPrefix.diag, '10')]",
+							"privateIPAllocationMethod": "Static",
+							"subnet": { "id": "[concat(resourceId('Microsoft.Network/virtualNetworks', concat(variables('deploymentName'), '-vnet')), '/subnets/', concat(variables('deploymentName'), '-subnet-diag'))]" },
+							"publicIPAddress": { "id": "[concat(resourceId('Microsoft.Network/publicIPAddresses', concat(variables('deploymentName'), '-publicip-diag')))]" }
+						}
+					}
+				]
+			}
+		},
+		{
+			"name": "[concat(variables('deploymentName'), '-vm-diag')]",
+			"type": "Microsoft.Compute/virtualMachines",
+			"apiVersion": "2016-04-30-preview",
+			"location": "[resourceGroup().location]",
+			"dependsOn": [ 
+				"[concat('Microsoft.Network/networkInterfaces/', concat(variables('deploymentName'), '-nic-jumphost'))]" 
+			],
+			"tags": { "displayName": "Diagnostics VM" },
+			"properties": {
+				"networkProfile": { "networkInterfaces": [ { "id": "[resourceId('Microsoft.Network/networkInterfaces', concat(variables('deploymentName'), '-nic-diag'))]" } ] },
+				"osProfile": {
+					"computerName": "[concat(variables('deploymentName'), '-vm-diag')]",
+					"adminUsername": "[variables('adminUserName')]",
+					"linuxConfiguration": {
+						"disablePasswordAuthentication": true,
+						"ssh": {
+							"publicKeys": [
+								{
+									"path": "[concat('/home/', variables('adminUserName'), '/.ssh/authorized_keys')]",
+									"keyData": "[variables('adminSshKey')]"
+								}
+							]
+						}
+					}
+				},
+				"hardwareProfile": { "vmSize": "[variables('vm').size.diag]" },
+				"storageProfile": {
+					"imageReference": {
+						"publisher": "[variables('vm').os.publisher]",
+						"offer": "[variables('vm').os.offer]",
+						"sku": "[variables('vm').os.sku]",
+						"version": "[variables('vm').os.version]"
+					},
+					"osDisk": {
+						"createOption": "FromImage",
+						"name": "[concat(variables('deploymentName'), '-vm-jumphost-osdisk')]",
+						"diskSizeGB": 32,
+						"managedDisk": { "storageAccountType": "Standard_LRS" }
+					}, 
+					"dataDisks": [
+						{ 
+							"lun": 0, 
+							"createOption": "Attach", 
+							"caching": "None",
+							"managedDisk": { 
+								"id": "[resourceId(subscription().subscriptionId, parameters('diskResourceGroup'), 'Microsoft.Compute/disks', parameters('diskName'))]"
+							}
+						}
+					]
+				}
+			}
+		}
+	]
+}
