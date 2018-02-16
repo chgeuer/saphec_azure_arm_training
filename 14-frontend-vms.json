@@ -1,0 +1,334 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"deploymentName": {
+			"type": "string",
+			"defaultValue": "chgeuer123"
+		},
+		"adminSshKey": {
+			"type": "string",
+			"defaultValue": "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAk/ViUPrGp7KoJLuN2PgofgMyw7SN9zfLYFDDR0TRYa8cOvJlE8NdZYt6Oqa4aL/fslKr9bmlMCdawhZRL7sHccIIS0I0zG7iD15rQL3/Y5aZOf3ML+bebpSj+SE5OeHT9iobgsYpK8gq72d8tmZZAfKhx6fRJsgC2j2xXH/GveoZ5GkHnhJUYuYPmNjEb/PK7LT43XuP+E9Rderr3LPUTuBeGVW9do0HS7X8I2uTn0+BqgkZLOO4FCnSXxh1u6fuD++ZgOZVmB6Q1xEdHSA7LLnPkjDZqbWezLIh5cSdNPUW2JG7tMxQTAZzVoNMb6vAVsfslB16rqZQ21EdIq+0pw== chgeuer-dcos-1"
+		}
+	},
+	"variables": {
+		"adminUserName": "chgeuer",
+		"adminSshKey": "[parameters('adminSshKey')]",
+		"deploymentName": "[parameters('deploymentName')]",
+		"apiVersion": {
+			"publicIPAddresses": "2017-08-01",
+			"networkSecurityGroups": "2017-06-01",
+			"virtualNetworks": "2017-08-01",
+			"networkInterfaces": "2016-09-01",
+			"virtualMachines": "2017-03-30"
+		},
+		"vm": {
+			"os": {
+				"publisher": "SUSE",
+				"offer": "openSUSE-Leap",
+				"sku": "42.3",
+				"version": "latest"
+			},
+			"count": {
+				"frontend": 2
+			},
+			"size": {
+				"jumphost": "Basic_A1",
+				"frontend": "Basic_A1"
+			}
+		},
+		"vnet": {
+			"addresses": {
+				"addressSpace": "10.0.0.0/16",
+				"subnetPrefix": {
+					"jumphost": "10.0.1.",
+					"frontend": "10.0.2.",
+					"database": "10.0.3."
+				},
+				"subnet": {
+					"jumphost": "10.0.1.0/24",
+					"frontend": "10.0.2.0/24",
+					"database": "10.0.3.0/24",
+					"gatewaysubnet": "10.0.250.0/24"
+				}
+			}
+		}
+	},
+	"resources": [
+		{
+			"type": "Microsoft.Network/networkSecurityGroups",
+			"apiVersion": "[variables('apiVersion').networkSecurityGroups]",
+			"location": "[resourceGroup().location]",
+			"name": "[concat(variables('deploymentName'), '-nsg-jumphost')]",
+			"tags": {
+				"displayName": "NetworkSecurityGroup"
+			},
+			"properties": {
+				"securityRules": [
+					{
+						"name": "ssh-in",
+						"properties": {
+							"priority": 100,
+							"description": "Allow TCP/22 Inbound",
+							"access": "Allow",
+							"direction": "Inbound",
+							"protocol": "Tcp",
+							"sourceAddressPrefix": "Internet",
+							"sourcePortRange": "*",
+							"destinationAddressPrefix": "[variables('vnet').addresses.subnet.jumphost]",
+							"destinationPortRange": "22"
+						}
+					}
+				]
+			}
+		},
+		{
+			"type": "Microsoft.Network/networkSecurityGroups",
+			"apiVersion": "[variables('apiVersion').networkSecurityGroups]",
+			"location": "[resourceGroup().location]",
+			"name": "[concat(variables('deploymentName'), '-nsg-frontend')]",
+			"tags": {
+				"displayName": "NetworkSecurityGroup"
+			},
+			"properties": {
+				"securityRules": [
+					{
+						"name": "http-in",
+						"properties": {
+							"priority": 100,
+							"description": "Allow TCP/80 Inbound",
+							"access": "Allow",
+							"direction": "Inbound",
+							"protocol": "Tcp",
+							"sourceAddressPrefix": "Internet",
+							"sourcePortRange": "*",
+							"destinationAddressPrefix": "[variables('vnet').addresses.subnet.frontend]",
+							"destinationPortRange": "80"
+						}
+					},
+					{
+						"name": "https-in",
+						"properties": {
+							"priority": 101,
+							"description": "Allow TCP/443 Inbound",
+							"access": "Allow",
+							"direction": "Inbound",
+							"protocol": "Tcp",
+							"sourceAddressPrefix": "Internet",
+							"sourcePortRange": "*",
+							"destinationAddressPrefix": "[variables('vnet').addresses.subnet.frontend]",
+							"destinationPortRange": "443"
+						}
+					}
+				]
+			}
+		},
+		{
+			"type": "Microsoft.Network/networkSecurityGroups",
+			"apiVersion": "[variables('apiVersion').networkSecurityGroups]",
+			"location": "[resourceGroup().location]",
+			"name": "[concat(variables('deploymentName'), '-nsg-database')]",
+			"tags": {
+				"displayName": "NetworkSecurityGroup"
+			},
+			"properties": {
+				"securityRules": [
+					{
+						"name": "database-in",
+						"properties": {
+							"priority": 100,
+							"description": "Allow TCP/80 Inbound",
+							"access": "Allow",
+							"direction": "Inbound",
+							"protocol": "Tcp",
+							"sourceAddressPrefix": "[variables('vnet').addresses.subnet.frontend]",
+							"sourcePortRange": "*",
+							"destinationAddressPrefix": "[variables('vnet').addresses.subnet.database]",
+							"destinationPortRange": "80"
+						}
+					}
+				]
+			}
+		},
+		{
+			"type": "Microsoft.Network/virtualNetworks",
+			"apiVersion": "[variables('apiVersion').virtualNetworks]",
+			"name": "[concat(variables('deploymentName'), '-vnet')]",
+			"location": "[resourceGroup().location]",
+			"dependsOn": [
+				"[concat('Microsoft.Network/networkSecurityGroups/', concat(variables('deploymentName'), '-nsg-jumphost'))]",
+				"[concat('Microsoft.Network/networkSecurityGroups/', concat(variables('deploymentName'), '-nsg-frontend'))]",
+				"[concat('Microsoft.Network/networkSecurityGroups/', concat(variables('deploymentName'), '-nsg-database'))]"
+			],
+			"tags": {
+				"displayName": "A virtual network"
+			},
+			"properties": {
+				"addressSpace": {
+					"addressPrefixes": [
+						"[variables('vnet').addresses.addressSpace]"
+					]
+				},
+				"subnets": [
+					{
+						"name": "[concat(variables('deploymentName'), '-subnet-jumphost')]",
+						"properties": {
+							"addressPrefix": "[variables('vnet').addresses.subnet.jumphost]",
+							"networkSecurityGroup": {
+								"id": "[resourceId('Microsoft.Network/networkSecurityGroups', concat(variables('deploymentName'), '-nsg-jumphost'))]"
+							}
+						}
+					},
+					{
+						"name": "[concat(variables('deploymentName'), '-subnet-frontend')]",
+						"properties": {
+							"addressPrefix": "[variables('vnet').addresses.subnet.frontend]",
+							"networkSecurityGroup": {
+								"id": "[resourceId('Microsoft.Network/networkSecurityGroups', concat(variables('deploymentName'), '-nsg-frontend'))]"
+							}
+						}
+					},
+					{
+						"name": "[concat(variables('deploymentName'), '-subnet-database')]",
+						"properties": {
+							"addressPrefix": "[variables('vnet').addresses.subnet.database]",
+							"networkSecurityGroup": {
+								"id": "[resourceId('Microsoft.Network/networkSecurityGroups', concat(variables('deploymentName'), '-nsg-database'))]"
+							}
+						}
+					},
+					{
+						"name": "gatewaysubnet",
+						"properties": {
+							"addressPrefix": "[variables('vnet').addresses.subnet.gatewaysubnet]"
+						}
+					}
+				]
+			}
+		},
+		{
+			"type": "Microsoft.Network/publicIPAddresses",
+			"apiVersion": "[variables('apiVersion').publicIPAddresses]",
+			"name": "[concat(variables('deploymentName'), '-publicip-jumphost')]",
+			"tags": {
+				"displayName": "PublicIP Jumphost"
+			},
+			"location": "[resourceGroup().location]",
+			"sku": {
+				"name": "Standard"
+			},
+			"properties": {
+				"publicIPAllocationMethod": "Static",
+				"idleTimeoutInMinutes": 30,
+				"publicIpAddressVersion": 4,
+				"dnsSettings": {
+					"domainNameLabel": "[concat(variables('deploymentName'), '-ssh')]"
+				}
+			}
+		},
+		{
+			"type": "Microsoft.Network/networkInterfaces",
+			"name": "[concat(variables('deploymentName'), '-nic-jumphost')]",
+			"apiVersion": "[variables('apiVersion').networkInterfaces]",
+			"location": "[resourceGroup().location]",
+			"dependsOn": [
+				"[concat('Microsoft.Network/virtualNetworks/', concat(variables('deploymentName'), '-vnet'))]",
+				"[concat('Microsoft.Network/publicIPAddresses/', concat(variables('deploymentName'), '-publicip-jumphost'))]"
+			],
+			"tags": {
+				"displayName": "NIC Jumphost"
+			},
+			"properties": {
+				"ipConfigurations": [
+					{
+						"name": "ipconfig1",
+						"properties": {
+							"privateIpAddressVersion": "IPv4",
+							"privateIpAddress": "[concat(variables('vnet').addresses.subnetPrefix.jumphost, '10')]",
+							"privateIPAllocationMethod": "Static",
+							"subnet": {
+								"id": "[concat(resourceId('Microsoft.Network/virtualNetworks', concat(variables('deploymentName'), '-vnet')), '/subnets/', concat(variables('deploymentName'), '-subnet-jumphost'))]"
+							},
+							"publicIPAddress": {
+								"id": "[concat(resourceId('Microsoft.Network/publicIPAddresses', concat(variables('deploymentName'), '-publicip-jumphost')))]"
+							}
+						}
+					}
+				]
+			}
+		},
+		{
+			"name": "[concat(variables('deploymentName'), '-vm-jumphost')]",
+			"type": "Microsoft.Compute/virtualMachines",
+			"apiVersion": "[variables('apiVersion').virtualMachines]",
+			"location": "[resourceGroup().location]",
+			"dependsOn": [ 
+				"[concat('Microsoft.Network/networkInterfaces/', concat(variables('deploymentName'), '-nic-jumphost'))]" 
+			],
+			"properties": {
+				"networkProfile": { "networkInterfaces": [ { "id": "[resourceId('Microsoft.Network/networkInterfaces', concat(variables('deploymentName'), '-nic-jumphost'))]" } ] },
+				"osProfile": {
+					"computerName": "[concat(variables('deploymentName'), '-vm-jumphost')]",
+					"adminUsername": "[variables('adminUserName')]",
+					"linuxConfiguration": {
+						"disablePasswordAuthentication": true,
+						"ssh": {
+							"publicKeys": [
+								{
+									"path": "[concat('/home/', variables('adminUserName'), '/.ssh/authorized_keys')]",
+									"keyData": "[variables('adminSshKey')]"
+								}
+							]
+						}
+					}
+				},
+				"hardwareProfile": { "vmSize": "[variables('vm').size.jumphost]" },
+				"storageProfile": {
+					"imageReference": {
+						"publisher": "[variables('vm').os.publisher]",
+						"offer": "[variables('vm').os.offer]",
+						"sku": "[variables('vm').os.sku]",
+						"version": "[variables('vm').os.version]"
+					},
+					"osDisk": {
+						"createOption": "FromImage",
+						"name": "[concat(variables('deploymentName'), '-vm-jumphost-osdisk')]",
+						"diskSizeGB": 32,
+						"managedDisk": { "storageAccountType": "Standard_LRS" }
+					}
+				}
+			}
+		},
+		{
+			"type": "Microsoft.Network/networkInterfaces",
+			"name": "[concat(variables('deploymentName'), '-nic-frontend-', string(copyIndex()))]",
+			"apiVersion": "[variables('apiVersion').networkInterfaces]",
+			"location": "[resourceGroup().location]",
+			"copy": {
+				"name": "nic-frontend-copy",
+				"count": "[variables('vm').count.frontend]"
+			},
+			"dependsOn": [
+				"[concat('Microsoft.Network/virtualNetworks/', concat(variables('deploymentName'), '-vnet'))]"
+			],
+			"tags": {
+				"displayName": "NIC Frontend"
+			},
+			"properties": {
+				"ipConfigurations": [
+					{
+						"name": "ipconfig1",
+						"properties": {
+							"privateIpAddressVersion": "IPv4",
+							"privateIpAddress": "[concat(variables('vnet').addresses.subnetPrefix.jumphost, string(add(10, copyIndex())))]",
+							"privateIPAllocationMethod": "Static",
+							"subnet": {
+								"id": "[concat(resourceId('Microsoft.Network/virtualNetworks', concat(variables('deploymentName'), '-vnet')), '/subnets/', concat(variables('deploymentName'), '-subnet-frontend'))]"
+							}
+						}
+					}
+				]
+			}
+		}
+	]
+}

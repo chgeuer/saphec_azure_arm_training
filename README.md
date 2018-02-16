@@ -67,9 +67,10 @@ az group deployment create \
 ## Docs
 
 - [ARM Language](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates)
+- [ARM Functions](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-functions)
 - [Network RP](https://docs.microsoft.com/en-us/azure/virtual-network/resource-groups-networking)
-
 
 ## Command line inspiration
 
 - list all resource groups: `az group list | jq '.[] | .location + " - " + .name'`
+- list VM sizes: `az vm list-sizes --location westeurope | jq -r .[].name`
