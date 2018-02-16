@@ -21,5 +21,5 @@ lrwxrwxrwx 1 root root 0 Feb  6 21:07 /sys/block/sdd/device -> ../../../3:0:0:2
 ```bash
 mkdir /temporarymount
 mount /dev/sdc1 /temporarymount -t ext4
-cd /temporarymount/users/chgeuer
+cd /temporarymount/home/chgeuer/.ssh
 ```
