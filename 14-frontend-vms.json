@@ -320,7 +320,7 @@
 						"name": "ipconfig1",
 						"properties": {
 							"privateIpAddressVersion": "IPv4",
-							"privateIpAddress": "[concat(variables('vnet').addresses.subnetPrefix.jumphost, string(add(10, copyIndex())))]",
+							"privateIpAddress": "[concat(variables('vnet').addresses.subnetPrefix.frontend, string(add(10, copyIndex())))]",
 							"privateIPAllocationMethod": "Static",
 							"subnet": {
 								"id": "[concat(resourceId('Microsoft.Network/virtualNetworks', concat(variables('deploymentName'), '-vnet')), '/subnets/', concat(variables('deploymentName'), '-subnet-frontend'))]"
