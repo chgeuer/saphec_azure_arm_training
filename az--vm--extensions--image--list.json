@@ -1,0 +1,2857 @@
+[
+  {
+    "name": "AcronisBackup",
+    "publisher": "Acronis.Backup",
+    "version": "1.0.33"
+  },
+  {
+    "name": "AcronisBackupLinux",
+    "publisher": "Acronis.Backup",
+    "version": "1.0.33"
+  },
+  {
+    "name": "AlertLogicLM",
+    "publisher": "alertlogic",
+    "version": "1.3.0.1"
+  },
+  {
+    "name": "AlertLogicLM",
+    "publisher": "AlertLogic.Extension",
+    "version": "1.3.0.0"
+  },
+  {
+    "name": "AlertLogicLM",
+    "publisher": "AlertLogic.Extension",
+    "version": "1.4.0.0"
+  },
+  {
+    "name": "AlertLogicLM",
+    "publisher": "AlertLogic.Extension",
+    "version": "1.9.0.0"
+  },
+  {
+    "name": "AlertLogicLM",
+    "publisher": "AlertLogic.Extension",
+    "version": "1.9.1.0"
+  },
+  {
+    "name": "AgentWinExt",
+    "publisher": "bmc.ctm",
+    "version": "9.0.0.1"
+  },
+  {
+    "name": "ChefClient",
+    "publisher": "Chef.Bootstrap.WindowsAzure",
+    "version": "11.18.6.2"
+  },
+  {
+    "name": "ChefClient",
+    "publisher": "Chef.Bootstrap.WindowsAzure",
+    "version": "1207.12.3.0"
+  },
+  {
+    "name": "ChefClient",
+    "publisher": "Chef.Bootstrap.WindowsAzure",
+    "version": "1210.12.109.1004"
+  },
+  {
+    "name": "ChefClient",
+    "publisher": "Chef.Bootstrap.WindowsAzure",
+    "version": "1210.12.109.1005"
+  },
+  {
+    "name": "ChefClient",
+    "publisher": "Chef.Bootstrap.WindowsAzure",
+    "version": "1210.12.110.1000"
+  },
+  {
+    "name": "LinuxChefClient",
+    "publisher": "Chef.Bootstrap.WindowsAzure",
+    "version": "11.18.6.2"
+  },
+  {
+    "name": "LinuxChefClient",
+    "publisher": "Chef.Bootstrap.WindowsAzure",
+    "version": "1207.12.3.0"
+  },
+  {
+    "name": "LinuxChefClient",
+    "publisher": "Chef.Bootstrap.WindowsAzure",
+    "version": "1210.12.109.1004"
+  },
+  {
+    "name": "LinuxChefClient",
+    "publisher": "Chef.Bootstrap.WindowsAzure",
+    "version": "1210.12.110.1000"
+  },
+  {
+    "name": "CloudLinkSecureVMLinuxAgent",
+    "publisher": "CloudLinkEMC.SecureVM",
+    "version": "5.0.22503.21808"
+  },
+  {
+    "name": "CloudLinkSecureVMLinuxAgent",
+    "publisher": "CloudLinkEMC.SecureVM",
+    "version": "5.5.23389.23430"
+  },
+  {
+    "name": "CloudLinkSecureVMLinuxAgent",
+    "publisher": "CloudLinkEMC.SecureVM",
+    "version": "6.0.62.0"
+  },
+  {
+    "name": "CloudLinkSecureVMWindowsAgent",
+    "publisher": "CloudLinkEMC.SecureVM",
+    "version": "5.5.6.23416"
+  },
+  {
+    "name": "CloudLinkSecureVMWindowsAgent",
+    "publisher": "CloudLinkEMC.SecureVM",
+    "version": "6.0.66.0"
+  },
+  {
+    "name": "CloudLinkSecureVMWindowsAgent",
+    "publisher": "CloudLinkEMC.SecureVM",
+    "version": "6.5.69.0"
+  },
+  {
+    "name": "ConferForAzure",
+    "publisher": "Confer",
+    "version": "1.0.5.38"
+  },
+  {
+    "name": "ConferForAzure",
+    "publisher": "Confer",
+    "version": "1.0.5.39"
+  },
+  {
+    "name": "ConferForAzure",
+    "publisher": "Confer",
+    "version": "1.0.5.40"
+  },
+  {
+    "name": "BmcCtmAgentLinux",
+    "publisher": "ctm.bmc.com",
+    "version": "9.0.0.1"
+  },
+  {
+    "name": "DatadogLinuxAgent",
+    "publisher": "Datadog.Agent",
+    "version": "0.4"
+  },
+  {
+    "name": "DatadogWindowsAgent",
+    "publisher": "Datadog.Agent",
+    "version": "0.4.1"
+  },
+  {
+    "name": "DatadogWindowsAgent",
+    "publisher": "Datadog.Agent",
+    "version": "0.5"
+  },
+  {
+    "name": "DatadogWindowsAgent",
+    "publisher": "Datadog.Agent",
+    "version": "0.5.2"
+  },
+  {
+    "name": "dtmanaged",
+    "publisher": "dynatrace.ruxit",
+    "version": "1.4.0.11"
+  },
+  {
+    "name": "dtmanaged",
+    "publisher": "dynatrace.ruxit",
+    "version": "1.4.0.13"
+  },
+  {
+    "name": "oneAgentLinux",
+    "publisher": "dynatrace.ruxit",
+    "version": "2.2.0.0"
+  },
+  {
+    "name": "oneAgentManagedWindows",
+    "publisher": "dynatrace.ruxit",
+    "version": "1.0.0.4"
+  },
+  {
+    "name": "oneAgentWindows",
+    "publisher": "dynatrace.ruxit",
+    "version": "2.2.0.0"
+  },
+  {
+    "name": "FileSecurity",
+    "publisher": "ESET",
+    "version": "6.5.12010.1000"
+  },
+  {
+    "name": "FileSecurity",
+    "publisher": "ESET",
+    "version": "6.5.12014.1002"
+  },
+  {
+    "name": "ProtectVClientLinuxExtension",
+    "publisher": "Gemalto.SafeNet.ProtectV",
+    "version": "3.0.0.205"
+  },
+  {
+    "name": "ProtectVClientWindowsExtension",
+    "publisher": "Gemalto.SafeNet.ProtectV",
+    "version": "3.0.0.318"
+  },
+  {
+    "name": "DotnetAgent",
+    "publisher": "HPE.Security.ApplicationDefender",
+    "version": "1.0.0.2"
+  },
+  {
+    "name": "DotnetAgent",
+    "publisher": "HPE.Security.ApplicationDefender",
+    "version": "1.0.0.4"
+  },
+  {
+    "name": "DotnetAgent",
+    "publisher": "HPE.Security.ApplicationDefender",
+    "version": "1.6.13.0"
+  },
+  {
+    "name": "DotnetAgent",
+    "publisher": "HPE.Security.ApplicationDefender",
+    "version": "1.6.14.0"
+  },
+  {
+    "name": "DotnetAgent",
+    "publisher": "HPE.Security.ApplicationDefender",
+    "version": "1.6.9.0"
+  },
+  {
+    "name": "McAfeeEndpointSecurity",
+    "publisher": "McAfee.EndpointSecurity",
+    "version": "6.0"
+  },
+  {
+    "name": "IaaS47C6E03DTest",
+    "publisher": "Microsoft.Azure.Applications",
+    "version": "1.0.0.3"
+  },
+  {
+    "name": "MyBackupTest",
+    "publisher": "Microsoft.Azure.Backup.Test",
+    "version": "1.0.104.0"
+  },
+  {
+    "name": "MyBackupTest",
+    "publisher": "Microsoft.Azure.Backup.Test",
+    "version": "1.0.105.0"
+  },
+  {
+    "name": "MyBackupTest",
+    "publisher": "Microsoft.Azure.Backup.Test",
+    "version": "1.0.107.0"
+  },
+  {
+    "name": "MyBackupTest",
+    "publisher": "Microsoft.Azure.Backup.Test",
+    "version": "1.0.108.0"
+  },
+  {
+    "name": "MyBackupTest",
+    "publisher": "Microsoft.Azure.Backup.Test",
+    "version": "1.0.109.0"
+  },
+  {
+    "name": "IaaSDiagnostics",
+    "publisher": "Microsoft.Azure.Diagnostics",
+    "version": "1.1.0.0"
+  },
+  {
+    "name": "IaaSDiagnostics",
+    "publisher": "Microsoft.Azure.Diagnostics",
+    "version": "1.10.0.0"
+  },
+  {
+    "name": "IaaSDiagnostics",
+    "publisher": "Microsoft.Azure.Diagnostics",
+    "version": "1.10.0.1"
+  },
+  {
+    "name": "IaaSDiagnostics",
+    "publisher": "Microsoft.Azure.Diagnostics",
+    "version": "1.10.1.1"
+  },
+  {
+    "name": "IaaSDiagnostics",
+    "publisher": "Microsoft.Azure.Diagnostics",
+    "version": "1.11.0.0"
+  },
+  {
+    "name": "IaaSDiagnostics",
+    "publisher": "Microsoft.Azure.Diagnostics",
+    "version": "1.11.1.0"
+  },
+  {
+    "name": "IaaSDiagnostics",
+    "publisher": "Microsoft.Azure.Diagnostics",
+    "version": "1.11.2.0"
+  },
+  {
+    "name": "IaaSDiagnostics",
+    "publisher": "Microsoft.Azure.Diagnostics",
+    "version": "1.11.3.0"
+  },
+  {
+    "name": "IaaSDiagnostics",
+    "publisher": "Microsoft.Azure.Diagnostics",
+    "version": "1.2.0.0"
+  },
+  {
+    "name": "IaaSDiagnostics",
+    "publisher": "Microsoft.Azure.Diagnostics",
+    "version": "1.3.1.6"
+  },
+  {
+    "name": "IaaSDiagnostics",
+    "publisher": "Microsoft.Azure.Diagnostics",
+    "version": "1.4.2.1"
+  },
+  {
+    "name": "IaaSDiagnostics",
+    "publisher": "Microsoft.Azure.Diagnostics",
+    "version": "1.5.9.0"
+  },
+  {
+    "name": "IaaSDiagnostics",
+    "publisher": "Microsoft.Azure.Diagnostics",
+    "version": "1.6.2.0"
+  },
+  {
+    "name": "IaaSDiagnostics",
+    "publisher": "Microsoft.Azure.Diagnostics",
+    "version": "1.6.3.0"
+  },
+  {
+    "name": "IaaSDiagnostics",
+    "publisher": "Microsoft.Azure.Diagnostics",
+    "version": "1.6.4.0"
+  },
+  {
+    "name": "IaaSDiagnostics",
+    "publisher": "Microsoft.Azure.Diagnostics",
+    "version": "1.7.1.0"
+  },
+  {
+    "name": "IaaSDiagnostics",
+    "publisher": "Microsoft.Azure.Diagnostics",
+    "version": "1.7.3.0"
+  },
+  {
+    "name": "IaaSDiagnostics",
+    "publisher": "Microsoft.Azure.Diagnostics",
+    "version": "1.7.4.0"
+  },
+  {
+    "name": "IaaSDiagnostics",
+    "publisher": "Microsoft.Azure.Diagnostics",
+    "version": "1.8.0.0"
+  },
+  {
+    "name": "IaaSDiagnostics",
+    "publisher": "Microsoft.Azure.Diagnostics",
+    "version": "1.8.1.0"
+  },
+  {
+    "name": "IaaSDiagnostics",
+    "publisher": "Microsoft.Azure.Diagnostics",
+    "version": "1.9.0.0"
+  },
+  {
+    "name": "CustomScript",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "2.0.0"
+  },
+  {
+    "name": "CustomScript",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "2.0.1"
+  },
+  {
+    "name": "CustomScript",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "2.0.2"
+  },
+  {
+    "name": "CustomScript",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "2.0.3"
+  },
+  {
+    "name": "CustomScript",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "2.0.4"
+  },
+  {
+    "name": "CustomScript",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "2.0.5"
+  },
+  {
+    "name": "CustomScript",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "2.0.6"
+  },
+  {
+    "name": "MyBackupTestLinuxInt",
+    "publisher": "Microsoft.Azure.Backup.Test",
+    "version": "1.0.9132.0"
+  },
+  {
+    "name": "MyBackupTestLinuxInt",
+    "publisher": "Microsoft.Azure.Backup.Test",
+    "version": "1.0.9133.0"
+  },
+  {
+    "name": "KeyVaultForWindows",
+    "publisher": "Microsoft.Azure.KeyVault.Edp",
+    "version": "0.0.0.506"
+  },
+  {
+    "name": "DependencyAgentLinux",
+    "publisher": "Microsoft.Azure.Monitoring.DependencyAgent",
+    "version": "9.1.0.886"
+  },
+  {
+    "name": "DependencyAgentLinux",
+    "publisher": "Microsoft.Azure.Monitoring.DependencyAgent",
+    "version": "9.2.0.1001"
+  },
+  {
+    "name": "DependencyAgentLinux",
+    "publisher": "Microsoft.Azure.Monitoring.DependencyAgent",
+    "version": "9.2.1.1014"
+  },
+  {
+    "name": "DependencyAgentLinux",
+    "publisher": "Microsoft.Azure.Monitoring.DependencyAgent",
+    "version": "9.3.0.1058"
+  },
+  {
+    "name": "DependencyAgentLinux",
+    "publisher": "Microsoft.Azure.Monitoring.DependencyAgent",
+    "version": "9.4.0.1112"
+  },
+  {
+    "name": "DockerExtension",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "1.0.1512030601"
+  },
+  {
+    "name": "DockerExtension",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "1.1.1512090359"
+  },
+  {
+    "name": "DockerExtension",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "1.1.1512180541"
+  },
+  {
+    "name": "DockerExtension",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "1.1.1601070410"
+  },
+  {
+    "name": "DockerExtension",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "1.1.1601140348"
+  },
+  {
+    "name": "DockerExtension",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "1.1.1602270800"
+  },
+  {
+    "name": "DockerExtension",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "1.1.1604142300"
+  },
+  {
+    "name": "DockerExtension",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "1.1.1606092330"
+  },
+  {
+    "name": "DockerExtension",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "1.2.0"
+  },
+  {
+    "name": "DockerExtension",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "1.2.2"
+  },
+  {
+    "name": "LinuxDiagnostic",
+    "publisher": "Microsoft.Azure.Diagnostics",
+    "version": "3.0.101"
+  },
+  {
+    "name": "LinuxDiagnostic",
+    "publisher": "Microsoft.Azure.Diagnostics",
+    "version": "3.0.103"
+  },
+  {
+    "name": "LinuxDiagnostic",
+    "publisher": "Microsoft.Azure.Diagnostics",
+    "version": "3.0.107"
+  },
+  {
+    "name": "LinuxDiagnostic",
+    "publisher": "Microsoft.Azure.Diagnostics",
+    "version": "3.0.109"
+  },
+  {
+    "name": "DependencyAgentWindows",
+    "publisher": "Microsoft.Azure.Monitoring.DependencyAgent",
+    "version": "9.1.0.886"
+  },
+  {
+    "name": "DependencyAgentWindows",
+    "publisher": "Microsoft.Azure.Monitoring.DependencyAgent",
+    "version": "9.2.0.1001"
+  },
+  {
+    "name": "DependencyAgentWindows",
+    "publisher": "Microsoft.Azure.Monitoring.DependencyAgent",
+    "version": "9.2.1.1014"
+  },
+  {
+    "name": "DependencyAgentWindows",
+    "publisher": "Microsoft.Azure.Monitoring.DependencyAgent",
+    "version": "9.3.0.1058"
+  },
+  {
+    "name": "DependencyAgentWindows",
+    "publisher": "Microsoft.Azure.Monitoring.DependencyAgent",
+    "version": "9.4.0.1112"
+  },
+  {
+    "name": "FixEmulatedIO",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "1.0.0"
+  },
+  {
+    "name": "NetworkWatcherAgentLinux",
+    "publisher": "Microsoft.Azure.NetworkWatcher",
+    "version": "1.4.105.0"
+  },
+  {
+    "name": "NetworkWatcherAgentLinux",
+    "publisher": "Microsoft.Azure.NetworkWatcher",
+    "version": "1.4.20.0"
+  },
+  {
+    "name": "NetworkWatcherAgentLinux",
+    "publisher": "Microsoft.Azure.NetworkWatcher",
+    "version": "1.4.306.5"
+  },
+  {
+    "name": "NetworkWatcherAgentLinux",
+    "publisher": "Microsoft.Azure.NetworkWatcher",
+    "version": "1.4.411.1"
+  },
+  {
+    "name": "NetworkWatcherAgentLinux",
+    "publisher": "Microsoft.Azure.NetworkWatcher",
+    "version": "1.4.466.1"
+  },
+  {
+    "name": "FixLinuxDiagnostic",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "1.0.0"
+  },
+  {
+    "name": "AzurePerformanceDiagnostics",
+    "publisher": "Microsoft.Azure.Performance.Diagnostics",
+    "version": "1.0.1"
+  },
+  {
+    "name": "AzurePerformanceDiagnostics",
+    "publisher": "Microsoft.Azure.Performance.Diagnostics",
+    "version": "1.0.2"
+  },
+  {
+    "name": "AzurePerformanceDiagnostics",
+    "publisher": "Microsoft.Azure.Performance.Diagnostics",
+    "version": "1.0.5"
+  },
+  {
+    "name": "AzurePerformanceDiagnostics",
+    "publisher": "Microsoft.Azure.Performance.Diagnostics",
+    "version": "1.0.6"
+  },
+  {
+    "name": "AzurePerformanceDiagnostics",
+    "publisher": "Microsoft.Azure.Performance.Diagnostics",
+    "version": "1.0.7"
+  },
+  {
+    "name": "VMSnapshot",
+    "publisher": "Microsoft.Azure.RecoveryServices",
+    "version": "1.0.30.0"
+  },
+  {
+    "name": "VMSnapshot",
+    "publisher": "Microsoft.Azure.RecoveryServices",
+    "version": "1.0.33.0"
+  },
+  {
+    "name": "VMSnapshot",
+    "publisher": "Microsoft.Azure.RecoveryServices",
+    "version": "1.0.34.0"
+  },
+  {
+    "name": "VMSnapshot",
+    "publisher": "Microsoft.Azure.RecoveryServices",
+    "version": "1.0.36.0"
+  },
+  {
+    "name": "VMSnapshot",
+    "publisher": "Microsoft.Azure.RecoveryServices",
+    "version": "1.0.37.0"
+  },
+  {
+    "name": "VMSnapshot",
+    "publisher": "Microsoft.Azure.RecoveryServices",
+    "version": "1.0.38.0"
+  },
+  {
+    "name": "NetworkWatcherAgentWindows",
+    "publisher": "Microsoft.Azure.NetworkWatcher",
+    "version": "1.4.104.0"
+  },
+  {
+    "name": "NetworkWatcherAgentWindows",
+    "publisher": "Microsoft.Azure.NetworkWatcher",
+    "version": "1.4.20.0"
+  },
+  {
+    "name": "NetworkWatcherAgentWindows",
+    "publisher": "Microsoft.Azure.NetworkWatcher",
+    "version": "1.4.306.5"
+  },
+  {
+    "name": "NetworkWatcherAgentWindows",
+    "publisher": "Microsoft.Azure.NetworkWatcher",
+    "version": "1.4.411.1"
+  },
+  {
+    "name": "NetworkWatcherAgentWindows",
+    "publisher": "Microsoft.Azure.NetworkWatcher",
+    "version": "1.4.466.1"
+  },
+  {
+    "name": "LinuxAsm",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "2.0.1"
+  },
+  {
+    "name": "LinuxAsm",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "2.1.0"
+  },
+  {
+    "name": "LinuxAsm",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "2.1.1"
+  },
+  {
+    "name": "LinuxAsm",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "2.2.0"
+  },
+  {
+    "name": "LinuxAsm",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "2.2.1"
+  },
+  {
+    "name": "LinuxAsm",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "2.2.2"
+  },
+  {
+    "name": "LinuxAsm",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "2.2.3"
+  },
+  {
+    "name": "LinuxAsm",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "2.2.4"
+  },
+  {
+    "name": "LinuxAsm",
+    "publisher": "Microsoft.Azure.Extensions",
+    "version": "2.2.5"
+  },
+  {
+    "name": "VMSnapshot",
+    "publisher": "Microsoft.Azure.RecoveryServices.Edp",
+    "version": "1.0.37.0"
+  },
+  {
+    "name": "VMSnapshotLinux",
+    "publisher": "Microsoft.Azure.RecoveryServices",
+    "version": "1.0.9117.0"
+  },
+  {
+    "name": "VMSnapshotLinux",
+    "publisher": "Microsoft.Azure.RecoveryServices",
+    "version": "1.0.9118.0"
+  },
+  {
+    "name": "VMSnapshotLinux",
+    "publisher": "Microsoft.Azure.RecoveryServices",
+    "version": "1.0.9120.0"
+  },
+  {
+    "name": "VMSnapshotLinux",
+    "publisher": "Microsoft.Azure.RecoveryServices",
+    "version": "1.0.9121.0"
+  },
+  {
+    "name": "VMSnapshotLinux",
+    "publisher": "Microsoft.Azure.RecoveryServices",
+    "version": "1.0.9123.0"
+  },
+  {
+    "name": "VMSnapshotLinux",
+    "publisher": "Microsoft.Azure.RecoveryServices",
+    "version": "1.0.9124.0"
+  },
+  {
+    "name": "VMSnapshotLinux",
+    "publisher": "Microsoft.Azure.RecoveryServices",
+    "version": "1.0.9125.0"
+  },
+  {
+    "name": "VMSnapshotLinux",
+    "publisher": "Microsoft.Azure.RecoveryServices",
+    "version": "1.0.9126.0"
+  },
+  {
+    "name": "VMSnapshotLinux",
+    "publisher": "Microsoft.Azure.RecoveryServices",
+    "version": "1.0.9127.0"
+  },
+  {
+    "name": "Linux",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.4"
+  },
+  {
+    "name": "Linux",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.6"
+  },
+  {
+    "name": "Linux",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.8"
+  },
+  {
+    "name": "VMSnapshotLinux",
+    "publisher": "Microsoft.Azure.RecoveryServices.Edp",
+    "version": "1.0.9125.0"
+  },
+  {
+    "name": "LinuxDEBIAN7",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery2",
+    "version": "1.0.0.3"
+  },
+  {
+    "name": "LinuxDEBIAN7",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery2",
+    "version": "1.0.0.4"
+  },
+  {
+    "name": "LinuxDEBIAN7",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery2",
+    "version": "1.0.0.5"
+  },
+  {
+    "name": "LinuxDEBIAN7",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery2",
+    "version": "1.0.0.6"
+  },
+  {
+    "name": "LinuxDEBIAN7",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery2",
+    "version": "1.0.0.8"
+  },
+  {
+    "name": "AzureBackupWindowsWorkload",
+    "publisher": "Microsoft.Azure.RecoveryServices.WorkloadBackup",
+    "version": "1.0.0.0"
+  },
+  {
+    "name": "AzureBackupWindowsWorkload",
+    "publisher": "Microsoft.Azure.RecoveryServices.WorkloadBackup",
+    "version": "1.0.0.2"
+  },
+  {
+    "name": "AzureBackupWindowsWorkload",
+    "publisher": "Microsoft.Azure.RecoveryServices.WorkloadBackup",
+    "version": "1.0.0.4"
+  },
+  {
+    "name": "AzureBackupWindowsWorkload",
+    "publisher": "Microsoft.Azure.RecoveryServices.WorkloadBackup",
+    "version": "1.0.0.5"
+  },
+  {
+    "name": "LinuxOL6",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.5"
+  },
+  {
+    "name": "LinuxOL6",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.6"
+  },
+  {
+    "name": "LinuxOL6",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.8"
+  },
+  {
+    "name": "LinuxDEBIAN8",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery2",
+    "version": "1.0.0.3"
+  },
+  {
+    "name": "LinuxDEBIAN8",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery2",
+    "version": "1.0.0.4"
+  },
+  {
+    "name": "LinuxDEBIAN8",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery2",
+    "version": "1.0.0.5"
+  },
+  {
+    "name": "LinuxDEBIAN8",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery2",
+    "version": "1.0.0.6"
+  },
+  {
+    "name": "LinuxDEBIAN8",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery2",
+    "version": "1.0.0.8"
+  },
+  {
+    "name": "ADEForLinuxTest",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "0.1.0.999298"
+  },
+  {
+    "name": "ADEForLinuxTest",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "0.1.0.999299"
+  },
+  {
+    "name": "AzureDiskEncryptionForLinux",
+    "publisher": "Microsoft.Azure.Security.Edp",
+    "version": "0.1.0.999311"
+  },
+  {
+    "name": "AzureDiskEncryptionForLinux",
+    "publisher": "Microsoft.Azure.Security.Edp",
+    "version": "1.1.0.1"
+  },
+  {
+    "name": "LinuxRHEL6",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.5"
+  },
+  {
+    "name": "LinuxRHEL6",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.6"
+  },
+  {
+    "name": "LinuxRHEL6",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.8"
+  },
+  {
+    "name": "IaaSAntimalware",
+    "publisher": "Microsoft.Azure.Security.Test",
+    "version": "1.5.2.0"
+  },
+  {
+    "name": "ADETest",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "1.4.0.7"
+  },
+  {
+    "name": "ADETest",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "1.4.0.8"
+  },
+  {
+    "name": "ADETest",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "2.0.0.0"
+  },
+  {
+    "name": "ADETest",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "2.0.0.1"
+  },
+  {
+    "name": "ADETest",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "2.0.0.2"
+  },
+  {
+    "name": "ADETest",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "2.0.0.3"
+  },
+  {
+    "name": "ADETest",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "2.0.0.4"
+  },
+  {
+    "name": "LinuxRHEL7",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.5"
+  },
+  {
+    "name": "LinuxRHEL7",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.6"
+  },
+  {
+    "name": "LinuxRHEL7",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.8"
+  },
+  {
+    "name": "Linux",
+    "publisher": "Microsoft.Azure.SiteRecovery.Test",
+    "version": "1.2.0.81"
+  },
+  {
+    "name": "Linux",
+    "publisher": "Microsoft.Azure.SiteRecovery.Test",
+    "version": "1.2.0.82"
+  },
+  {
+    "name": "LinuxSLES11SP3",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.5"
+  },
+  {
+    "name": "LinuxSLES11SP3",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.6"
+  },
+  {
+    "name": "LinuxSLES11SP3",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.8"
+  },
+  {
+    "name": "ADETestWire",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "1.0.0.0"
+  },
+  {
+    "name": "LinuxDEBIAN7",
+    "publisher": "Microsoft.Azure.SiteRecovery2.Test",
+    "version": "1.0.0.75"
+  },
+  {
+    "name": "LinuxDEBIAN7",
+    "publisher": "Microsoft.Azure.SiteRecovery2.Test",
+    "version": "1.0.0.76"
+  },
+  {
+    "name": "LinuxDEBIAN7",
+    "publisher": "Microsoft.Azure.SiteRecovery2.Test",
+    "version": "1.0.0.77"
+  },
+  {
+    "name": "LinuxDEBIAN7",
+    "publisher": "Microsoft.Azure.SiteRecovery2.Test",
+    "version": "1.0.0.78"
+  },
+  {
+    "name": "LinuxOL6",
+    "publisher": "Microsoft.Azure.SiteRecovery.Test",
+    "version": "1.3.0.170"
+  },
+  {
+    "name": "LinuxOL6",
+    "publisher": "Microsoft.Azure.SiteRecovery.Test",
+    "version": "1.3.0.171"
+  },
+  {
+    "name": "TestMSILinuxExtension",
+    "publisher": "Microsoft.Azure.Test.Identity",
+    "version": "1.0.0.7"
+  },
+  {
+    "name": "LinuxSLES11SP4",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.5"
+  },
+  {
+    "name": "LinuxSLES11SP4",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.6"
+  },
+  {
+    "name": "LinuxSLES11SP4",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.8"
+  },
+  {
+    "name": "AzureDiskEncryption",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "1.0.0.0"
+  },
+  {
+    "name": "AzureDiskEncryption",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "1.1.0.0"
+  },
+  {
+    "name": "AzureDiskEncryption",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "1.1.0.1"
+  },
+  {
+    "name": "AzureDiskEncryption",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "1.1.0.2"
+  },
+  {
+    "name": "AzureDiskEncryption",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "1.1.0.4"
+  },
+  {
+    "name": "AzureDiskEncryption",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "2.0.0.0"
+  },
+  {
+    "name": "AzureDiskEncryption",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "2.1.0.0"
+  },
+  {
+    "name": "LinuxDEBIAN8",
+    "publisher": "Microsoft.Azure.SiteRecovery2.Test",
+    "version": "1.0.0.76"
+  },
+  {
+    "name": "LinuxDEBIAN8",
+    "publisher": "Microsoft.Azure.SiteRecovery2.Test",
+    "version": "1.0.0.77"
+  },
+  {
+    "name": "LinuxDEBIAN8",
+    "publisher": "Microsoft.Azure.SiteRecovery2.Test",
+    "version": "1.0.0.78"
+  },
+  {
+    "name": "LinuxRHEL6",
+    "publisher": "Microsoft.Azure.SiteRecovery.Test",
+    "version": "1.5.0.173"
+  },
+  {
+    "name": "LinuxRHEL6",
+    "publisher": "Microsoft.Azure.SiteRecovery.Test",
+    "version": "1.5.0.174"
+  },
+  {
+    "name": "LinuxUBUNTU1404",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.5"
+  },
+  {
+    "name": "LinuxUBUNTU1404",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.6"
+  },
+  {
+    "name": "LinuxUBUNTU1404",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.8"
+  },
+  {
+    "name": "AzureDiskEncryptionForLinux",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "0.1.0.999283"
+  },
+  {
+    "name": "AzureDiskEncryptionForLinux",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "0.1.0.999297"
+  },
+  {
+    "name": "AzureDiskEncryptionForLinux",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "0.1.0.999302"
+  },
+  {
+    "name": "AzureDiskEncryptionForLinux",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "0.1.0.999304"
+  },
+  {
+    "name": "AzureDiskEncryptionForLinux",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "0.1.0.999305"
+  },
+  {
+    "name": "AzureDiskEncryptionForLinux",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "0.1.0.999306"
+  },
+  {
+    "name": "AzureDiskEncryptionForLinux",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "0.1.0.999307"
+  },
+  {
+    "name": "AzureDiskEncryptionForLinux",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "0.1.0.999308"
+  },
+  {
+    "name": "AzureDiskEncryptionForLinux",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "0.1.0.999309"
+  },
+  {
+    "name": "AzureDiskEncryptionForLinux",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "1.0.0.0"
+  },
+  {
+    "name": "AzureDiskEncryptionForLinux",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "1.1.0.0"
+  },
+  {
+    "name": "TestMSIWindowsExtension",
+    "publisher": "Microsoft.Azure.Test.Identity",
+    "version": "1.0.0.11"
+  },
+  {
+    "name": "LinuxRHEL7",
+    "publisher": "Microsoft.Azure.SiteRecovery.Test",
+    "version": "1.3.0.168"
+  },
+  {
+    "name": "LinuxRHEL7",
+    "publisher": "Microsoft.Azure.SiteRecovery.Test",
+    "version": "1.3.0.169"
+  },
+  {
+    "name": "LinuxRHEL7",
+    "publisher": "Microsoft.Azure.SiteRecovery.Test",
+    "version": "1.3.0.170"
+  },
+  {
+    "name": "AzureDiskEncryptionForLinuxTest",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "0.1.0.999300"
+  },
+  {
+    "name": "AzureDiskEncryptionForLinuxTest",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "0.1.0.999301"
+  },
+  {
+    "name": "AzureDiskEncryptionForLinuxTest",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "1.0.0.4"
+  },
+  {
+    "name": "LinuxSLES11SP3",
+    "publisher": "Microsoft.Azure.SiteRecovery.Test",
+    "version": "1.3.0.164"
+  },
+  {
+    "name": "LinuxSLES11SP3",
+    "publisher": "Microsoft.Azure.SiteRecovery.Test",
+    "version": "1.3.0.165"
+  },
+  {
+    "name": "LinuxSLES11SP3",
+    "publisher": "Microsoft.Azure.SiteRecovery.Test",
+    "version": "1.3.0.166"
+  },
+  {
+    "name": "LinuxSLES11SP3",
+    "publisher": "Microsoft.Azure.SiteRecovery.Test",
+    "version": "1.3.0.167"
+  },
+  {
+    "name": "LinuxUBUNTU1604",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.5"
+  },
+  {
+    "name": "LinuxUBUNTU1604",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.6"
+  },
+  {
+    "name": "LinuxUBUNTU1604",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.8"
+  },
+  {
+    "name": "AzureCATExtensionHandler",
+    "publisher": "Microsoft.AzureCAT.AzureEnhancedMonitoring",
+    "version": "2.2.0.48"
+  },
+  {
+    "name": "AzureCATExtensionHandler",
+    "publisher": "Microsoft.AzureCAT.AzureEnhancedMonitoring",
+    "version": "2.2.0.68"
+  },
+  {
+    "name": "IaaSAntimalware",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "1.0.0.0"
+  },
+  {
+    "name": "IaaSAntimalware",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "1.1.0.0"
+  },
+  {
+    "name": "IaaSAntimalware",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "1.2.0.0"
+  },
+  {
+    "name": "IaaSAntimalware",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "1.3.0.2"
+  },
+  {
+    "name": "IaaSAntimalware",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "1.3.0.3"
+  },
+  {
+    "name": "IaaSAntimalware",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "1.4.0.0"
+  },
+  {
+    "name": "IaaSAntimalware",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "1.4.0.1"
+  },
+  {
+    "name": "IaaSAntimalware",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "1.5.0.0"
+  },
+  {
+    "name": "IaaSAntimalware",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "1.5.2.0"
+  },
+  {
+    "name": "IaaSAntimalware",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "1.5.4.2"
+  },
+  {
+    "name": "IaaSAntimalware",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "1.5.4.3"
+  },
+  {
+    "name": "IaaSAntimalware",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "1.5.4.4"
+  },
+  {
+    "name": "IaaSAntimalware",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "1.5.5.0"
+  },
+  {
+    "name": "IaaSAntimalware",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "1.5.5.1"
+  },
+  {
+    "name": "LinuxSLES11SP4",
+    "publisher": "Microsoft.Azure.SiteRecovery.Test",
+    "version": "1.3.0.166"
+  },
+  {
+    "name": "LinuxSLES11SP4",
+    "publisher": "Microsoft.Azure.SiteRecovery.Test",
+    "version": "1.3.0.167"
+  },
+  {
+    "name": "SiteRecovery",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "0.0.0.0"
+  },
+  {
+    "name": "VMBackupForLinuxExtension",
+    "publisher": "Microsoft.Azure.Security",
+    "version": "0.1.0.995"
+  },
+  {
+    "name": "VMJITAccessExtension",
+    "publisher": "Microsoft.AzureSecurity.JITAccess",
+    "version": "1.0.0.0"
+  },
+  {
+    "name": "VMJITAccessExtension",
+    "publisher": "Microsoft.AzureSecurity.JITAccess",
+    "version": "1.0.1.0"
+  },
+  {
+    "name": "LinuxUBUNTU1404",
+    "publisher": "Microsoft.Azure.SiteRecovery.Test",
+    "version": "1.0.0.172"
+  },
+  {
+    "name": "SiteRecoveryLinux",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "0.0.0.1"
+  },
+  {
+    "name": "WorkloadBackup",
+    "publisher": "Microsoft.CloudBackup.Workload.Extension",
+    "version": "1.0.1338.47"
+  },
+  {
+    "name": "WorkloadBackup",
+    "publisher": "Microsoft.CloudBackup.Workload.Extension",
+    "version": "1.0.1338.48"
+  },
+  {
+    "name": "WorkloadBackup",
+    "publisher": "Microsoft.CloudBackup.Workload.Extension",
+    "version": "1.1.0.0"
+  },
+  {
+    "name": "WorkloadBackup",
+    "publisher": "Microsoft.CloudBackup.Workload.Extension",
+    "version": "1.1.0.2"
+  },
+  {
+    "name": "WorkloadBackup",
+    "publisher": "Microsoft.CloudBackup.Workload.Extension",
+    "version": "1.1.0.3"
+  },
+  {
+    "name": "LinuxUBUNTU1604",
+    "publisher": "Microsoft.Azure.SiteRecovery.Test",
+    "version": "1.0.0.84"
+  },
+  {
+    "name": "LinuxUBUNTU1604",
+    "publisher": "Microsoft.Azure.SiteRecovery.Test",
+    "version": "1.0.0.85"
+  },
+  {
+    "name": "Windows",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.4"
+  },
+  {
+    "name": "Windows",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.6"
+  },
+  {
+    "name": "Windows",
+    "publisher": "Microsoft.Azure.RecoveryServices.SiteRecovery",
+    "version": "1.0.0.8"
+  },
+  {
+    "name": "WorkloadBackup",
+    "publisher": "Microsoft.CloudBackup.Workload.Extension.Edp",
+    "version": "1.0.1338.46"
+  },
+  {
+    "name": "WorkloadBackup",
+    "publisher": "Microsoft.CloudBackup.Workload.Extension.Edp",
+    "version": "1.0.1338.47"
+  },
+  {
+    "name": "WorkloadBackup",
+    "publisher": "Microsoft.CloudBackup.Workload.Extension.Edp",
+    "version": "1.0.1338.48"
+  },
+  {
+    "name": "WorkloadBackup",
+    "publisher": "Microsoft.CloudBackup.Workload.Extension.Edp",
+    "version": "1.0.1338.49"
+  },
+  {
+    "name": "WorkloadBackupLinux",
+    "publisher": "Microsoft.CloudBackup.Workload.Extension",
+    "version": "1.0.0.1"
+  },
+  {
+    "name": "WorkloadBackupLinux",
+    "publisher": "Microsoft.CloudBackup.Workload.Extension",
+    "version": "1.0.0.2"
+  },
+  {
+    "name": "BGInfo",
+    "publisher": "Microsoft.Compute",
+    "version": "2.1"
+  },
+  {
+    "name": "WindowsTest",
+    "publisher": "Microsoft.Azure.SiteRecovery.Test",
+    "version": "1.4.0.93"
+  },
+  {
+    "name": "WindowsTest",
+    "publisher": "Microsoft.Azure.SiteRecovery.Test",
+    "version": "1.4.0.94"
+  },
+  {
+    "name": "WindowsTest",
+    "publisher": "Microsoft.Azure.SiteRecovery.Test",
+    "version": "1.4.0.95"
+  },
+  {
+    "name": "WorkloadBackupLinux",
+    "publisher": "Microsoft.CloudBackup.Workload.Extension.Edp",
+    "version": "1.0.0.3"
+  },
+  {
+    "name": "WorkloadBackupLinux",
+    "publisher": "Microsoft.CloudBackup.Workload.Extension.Edp",
+    "version": "1.0.0.4"
+  },
+  {
+    "name": "WorkloadBackupLinux",
+    "publisher": "Microsoft.CloudBackup.Workload.Extension.Edp",
+    "version": "1.0.0.5"
+  },
+  {
+    "name": "CustomScriptExtension",
+    "publisher": "Microsoft.Compute",
+    "version": "1.0.1"
+  },
+  {
+    "name": "CustomScriptExtension",
+    "publisher": "Microsoft.Compute",
+    "version": "1.0.3"
+  },
+  {
+    "name": "CustomScriptExtension",
+    "publisher": "Microsoft.Compute",
+    "version": "1.1"
+  },
+  {
+    "name": "CustomScriptExtension",
+    "publisher": "Microsoft.Compute",
+    "version": "1.2"
+  },
+  {
+    "name": "CustomScriptExtension",
+    "publisher": "Microsoft.Compute",
+    "version": "1.3"
+  },
+  {
+    "name": "CustomScriptExtension",
+    "publisher": "Microsoft.Compute",
+    "version": "1.4"
+  },
+  {
+    "name": "CustomScriptExtension",
+    "publisher": "Microsoft.Compute",
+    "version": "1.7"
+  },
+  {
+    "name": "CustomScriptExtension",
+    "publisher": "Microsoft.Compute",
+    "version": "1.8"
+  },
+  {
+    "name": "CustomScriptExtension",
+    "publisher": "Microsoft.Compute",
+    "version": "1.9"
+  },
+  {
+    "name": "NullLinux",
+    "publisher": "Microsoft.CPlat.Core",
+    "version": "1.0.0"
+  },
+  {
+    "name": "NullLinux",
+    "publisher": "Microsoft.CPlat.Core",
+    "version": "1.0.1"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.DscPolicy.Test",
+    "version": "1.0.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.DscPolicy.Test",
+    "version": "1.0.0.1"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.DscPolicy.Test",
+    "version": "1.0.0.2"
+  },
+  {
+    "name": "JsonADDomainExtension",
+    "publisher": "Microsoft.Compute",
+    "version": "1.0"
+  },
+  {
+    "name": "JsonADDomainExtension",
+    "publisher": "Microsoft.Compute",
+    "version": "1.3"
+  },
+  {
+    "name": "RunCommandLinux",
+    "publisher": "Microsoft.CPlat.Core",
+    "version": "1.0.0"
+  },
+  {
+    "name": "MicrosoftMonitoringAgent",
+    "publisher": "Microsoft.EnterpriseCloud.Monitoring",
+    "version": "1.0.11049.5"
+  },
+  {
+    "name": "MicrosoftMonitoringAgent",
+    "publisher": "Microsoft.EnterpriseCloud.Monitoring",
+    "version": "1.0.11049.7"
+  },
+  {
+    "name": "MicrosoftMonitoringAgent",
+    "publisher": "Microsoft.EnterpriseCloud.Monitoring",
+    "version": "1.0.11072.0"
+  },
+  {
+    "name": "MicrosoftMonitoringAgent",
+    "publisher": "Microsoft.EnterpriseCloud.Monitoring",
+    "version": "1.0.11072.1"
+  },
+  {
+    "name": "MicrosoftMonitoringAgent",
+    "publisher": "Microsoft.EnterpriseCloud.Monitoring",
+    "version": "1.0.11081.1"
+  },
+  {
+    "name": "MicrosoftMonitoringAgent",
+    "publisher": "Microsoft.EnterpriseCloud.Monitoring",
+    "version": "1.0.11081.2"
+  },
+  {
+    "name": "MicrosoftMonitoringAgent",
+    "publisher": "Microsoft.EnterpriseCloud.Monitoring.Test",
+    "version": "1.0.11030.0"
+  },
+  {
+    "name": "MicrosoftMonitoringAgent",
+    "publisher": "Microsoft.EnterpriseCloud.Monitoring.Test",
+    "version": "1.0.11049.0"
+  },
+  {
+    "name": "MicrosoftMonitoringAgent",
+    "publisher": "Microsoft.EnterpriseCloud.Monitoring.Test",
+    "version": "1.0.11049.1"
+  },
+  {
+    "name": "VMAccessAgent",
+    "publisher": "Microsoft.Compute",
+    "version": "2.0"
+  },
+  {
+    "name": "VMAccessAgent",
+    "publisher": "Microsoft.Compute",
+    "version": "2.0.1"
+  },
+  {
+    "name": "VMAccessAgent",
+    "publisher": "Microsoft.Compute",
+    "version": "2.0.2"
+  },
+  {
+    "name": "VMAccessAgent",
+    "publisher": "Microsoft.Compute",
+    "version": "2.3"
+  },
+  {
+    "name": "VMAccessAgent",
+    "publisher": "Microsoft.Compute",
+    "version": "2.4"
+  },
+  {
+    "name": "VMAccessAgent",
+    "publisher": "Microsoft.Compute",
+    "version": "2.4.1"
+  },
+  {
+    "name": "VMAccessAgent",
+    "publisher": "Microsoft.Compute",
+    "version": "2.4.2"
+  },
+  {
+    "name": "RunCommandWindows",
+    "publisher": "Microsoft.CPlat.Core",
+    "version": "1.0.0"
+  },
+  {
+    "name": "OmsAgentForLinux",
+    "publisher": "Microsoft.EnterpriseCloud.Monitoring",
+    "version": "1.0.217.0"
+  },
+  {
+    "name": "OmsAgentForLinux",
+    "publisher": "Microsoft.EnterpriseCloud.Monitoring",
+    "version": "1.2.148.0"
+  },
+  {
+    "name": "OmsAgentForLinux",
+    "publisher": "Microsoft.EnterpriseCloud.Monitoring",
+    "version": "1.3.127.5"
+  },
+  {
+    "name": "OmsAgentForLinux",
+    "publisher": "Microsoft.EnterpriseCloud.Monitoring",
+    "version": "1.3.127.7"
+  },
+  {
+    "name": "OmsAgentForLinux",
+    "publisher": "Microsoft.EnterpriseCloud.Monitoring",
+    "version": "1.3.18.7"
+  },
+  {
+    "name": "OmsAgentForLinux",
+    "publisher": "Microsoft.EnterpriseCloud.Monitoring",
+    "version": "1.4.45.2"
+  },
+  {
+    "name": "OmsAgentForLinux",
+    "publisher": "Microsoft.EnterpriseCloud.Monitoring",
+    "version": "1.4.45.3"
+  },
+  {
+    "name": "OmsAgentForLinux",
+    "publisher": "Microsoft.EnterpriseCloud.Monitoring",
+    "version": "1.4.55.4"
+  },
+  {
+    "name": "OmsAgentForLinux",
+    "publisher": "Microsoft.EnterpriseCloud.Monitoring",
+    "version": "1.4.56.5"
+  },
+  {
+    "name": "OmsAgentForLinux",
+    "publisher": "Microsoft.EnterpriseCloud.Monitoring",
+    "version": "1.4.58.7"
+  },
+  {
+    "name": "OmsAgentForLinux",
+    "publisher": "Microsoft.EnterpriseCloud.Monitoring",
+    "version": "1.4.59.1"
+  },
+  {
+    "name": "HpcVmDrivers",
+    "publisher": "Microsoft.HpcCompute",
+    "version": "1.1.0.0"
+  },
+  {
+    "name": "HpcVmDrivers",
+    "publisher": "Microsoft.HpcCompute",
+    "version": "1.1.1.1"
+  },
+  {
+    "name": "HpcVmDrivers",
+    "publisher": "Microsoft.HpcCompute",
+    "version": "1.1.2.0"
+  },
+  {
+    "name": "HpcVmDrivers",
+    "publisher": "Microsoft.HpcCompute",
+    "version": "1.1.3.0"
+  },
+  {
+    "name": "LinuxNodeAgent",
+    "publisher": "Microsoft.HpcPack",
+    "version": "1.5.1.0"
+  },
+  {
+    "name": "LinuxNodeAgent",
+    "publisher": "Microsoft.HpcPack",
+    "version": "1.6.18.3"
+  },
+  {
+    "name": "LinuxNodeAgent",
+    "publisher": "Microsoft.HpcPack",
+    "version": "1.7.11.2"
+  },
+  {
+    "name": "LinuxNodeAgent",
+    "publisher": "Microsoft.HpcPack",
+    "version": "2.1.5.0"
+  },
+  {
+    "name": "ManagedIdentityExtensionForLinux",
+    "publisher": "Microsoft.ManagedIdentity",
+    "version": "1.0.0.1"
+  },
+  {
+    "name": "ManagedIdentityExtensionForLinux",
+    "publisher": "Microsoft.ManagedIdentity",
+    "version": "1.0.0.10"
+  },
+  {
+    "name": "ManagedIdentityExtensionForLinux",
+    "publisher": "Microsoft.ManagedIdentity",
+    "version": "1.0.0.3"
+  },
+  {
+    "name": "ManagedIdentityExtensionForLinux",
+    "publisher": "Microsoft.ManagedIdentity",
+    "version": "1.0.0.8"
+  },
+  {
+    "name": "AzureDiskEncryptionForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "0.1.0.999105"
+  },
+  {
+    "name": "LinuxNodeAgent2016",
+    "publisher": "Microsoft.HpcPack",
+    "version": "2.1.6.0"
+  },
+  {
+    "name": "AzureDiagnosticsLinuxExtIaaS7.Test",
+    "publisher": "Microsoft.OSTCExtensions.Test",
+    "version": "1.0.0.0"
+  },
+  {
+    "name": "ManagedIdentityExtensionForWindows",
+    "publisher": "Microsoft.ManagedIdentity",
+    "version": "1.0.0.1"
+  },
+  {
+    "name": "ManagedIdentityExtensionForWindows",
+    "publisher": "Microsoft.ManagedIdentity",
+    "version": "1.0.0.10"
+  },
+  {
+    "name": "ManagedIdentityExtensionForWindows",
+    "publisher": "Microsoft.ManagedIdentity",
+    "version": "1.0.0.3"
+  },
+  {
+    "name": "ManagedIdentityExtensionForWindows",
+    "publisher": "Microsoft.ManagedIdentity",
+    "version": "1.0.0.8"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.10.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.13.2.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.14.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.15.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.16.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.17.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.18.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.19.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.20.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.21.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.22.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.23.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.24.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.25.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.26.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.26.1.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.4.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.5.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.6.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.7.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.70.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.71.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.71.1.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.72.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.73.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.74.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.8.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell",
+    "version": "2.9.1.0"
+  },
+  {
+    "name": "LinuxNodeAgent2016U1",
+    "publisher": "Microsoft.HpcPack",
+    "version": "2.3.1.1"
+  },
+  {
+    "name": "LinuxNodeAgent2016U1",
+    "publisher": "Microsoft.HpcPack",
+    "version": "2.3.2.1"
+  },
+  {
+    "name": "AzureEnhancedMonitorForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "2.0.0.2"
+  },
+  {
+    "name": "AzureEnhancedMonitorForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "3.0.0.1"
+  },
+  {
+    "name": "AzureEnhancedMonitorForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "3.0.0.5"
+  },
+  {
+    "name": "AzureEnhancedMonitorForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "3.0.0.97"
+  },
+  {
+    "name": "AzureEnhancedMonitorForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "3.0.0.98"
+  },
+  {
+    "name": "AzureEnhancedMonitorForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "3.0.0.99"
+  },
+  {
+    "name": "AzureEnhancedMonitorForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "3.0.1.0"
+  },
+  {
+    "name": "Blah",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell.Test",
+    "version": "2.73.0.0"
+  },
+  {
+    "name": "DSC",
+    "publisher": "Microsoft.Powershell.Test",
+    "version": "2.74.0.0"
+  },
+  {
+    "name": "MSEnterpriseApplication",
+    "publisher": "Microsoft.SystemCenter",
+    "version": "1.0.5.0"
+  },
+  {
+    "name": "CustomScriptForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.0"
+  },
+  {
+    "name": "CustomScriptForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.0.1"
+  },
+  {
+    "name": "CustomScriptForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.1"
+  },
+  {
+    "name": "CustomScriptForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.1.1"
+  },
+  {
+    "name": "CustomScriptForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.2.2.0"
+  },
+  {
+    "name": "CustomScriptForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.3.0.0"
+  },
+  {
+    "name": "CustomScriptForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.3.0.1"
+  },
+  {
+    "name": "CustomScriptForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.3.0.2"
+  },
+  {
+    "name": "CustomScriptForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.4.0.0"
+  },
+  {
+    "name": "CustomScriptForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.4.1.0"
+  },
+  {
+    "name": "CustomScriptForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.5.2.0"
+  },
+  {
+    "name": "CustomScriptForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.5.2.1"
+  },
+  {
+    "name": "CustomScriptForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.5.2.2"
+  },
+  {
+    "name": "SqlIaaSAgent",
+    "publisher": "Microsoft.SqlServer.Management",
+    "version": "1.2.10.0"
+  },
+  {
+    "name": "SqlIaaSAgent",
+    "publisher": "Microsoft.SqlServer.Management",
+    "version": "1.2.11.0"
+  },
+  {
+    "name": "SqlIaaSAgent",
+    "publisher": "Microsoft.SqlServer.Management",
+    "version": "1.2.12.0"
+  },
+  {
+    "name": "SqlIaaSAgent",
+    "publisher": "Microsoft.SqlServer.Management",
+    "version": "1.2.13.0"
+  },
+  {
+    "name": "SqlIaaSAgent",
+    "publisher": "Microsoft.SqlServer.Management",
+    "version": "1.2.14.0"
+  },
+  {
+    "name": "SqlIaaSAgent",
+    "publisher": "Microsoft.SqlServer.Management",
+    "version": "1.2.15.0"
+  },
+  {
+    "name": "SqlIaaSAgent",
+    "publisher": "Microsoft.SqlServer.Management",
+    "version": "1.2.16.0"
+  },
+  {
+    "name": "SqlIaaSAgent",
+    "publisher": "Microsoft.SqlServer.Management",
+    "version": "1.2.17.0"
+  },
+  {
+    "name": "SqlIaaSAgent",
+    "publisher": "Microsoft.SqlServer.Management",
+    "version": "1.2.18.0"
+  },
+  {
+    "name": "SqlIaaSAgent",
+    "publisher": "Microsoft.SqlServer.Management",
+    "version": "1.2.19.0"
+  },
+  {
+    "name": "SqlIaaSAgent",
+    "publisher": "Microsoft.SqlServer.Management",
+    "version": "1.2.20.0"
+  },
+  {
+    "name": "SqlIaaSAgent",
+    "publisher": "Microsoft.SqlServer.Management",
+    "version": "1.2.22.0"
+  },
+  {
+    "name": "SqlIaaSAgent",
+    "publisher": "Microsoft.SqlServer.Management",
+    "version": "1.2.24.0"
+  },
+  {
+    "name": "SqlIaaSAgent",
+    "publisher": "Microsoft.SqlServer.Management",
+    "version": "1.2.9.0"
+  },
+  {
+    "name": "DSCForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.0.0.0"
+  },
+  {
+    "name": "DSCForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "2.0.0.0"
+  },
+  {
+    "name": "DSCForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "2.1.0.0"
+  },
+  {
+    "name": "DSCForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "2.2.0.0"
+  },
+  {
+    "name": "DSCForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "2.3.0.0"
+  },
+  {
+    "name": "DSCForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "2.4.0.0"
+  },
+  {
+    "name": "DSCForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "2.5.0.0"
+  },
+  {
+    "name": "DSCForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "2.6.0.0"
+  },
+  {
+    "name": "DSCForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "2.70.0.2"
+  },
+  {
+    "name": "DSCForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "2.70.0.3"
+  },
+  {
+    "name": "DSCForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "2.70.0.4"
+  },
+  {
+    "name": "TestSqlIaaSAgent",
+    "publisher": "Microsoft.TestSqlServer.Edp",
+    "version": "20.12.0.0"
+  },
+  {
+    "name": "VSETWTraceListenerService",
+    "publisher": "Microsoft.VisualStudio.Azure.ETWTraceListenerService",
+    "version": "0.1.0.0"
+  },
+  {
+    "name": "VSETWTraceListenerService",
+    "publisher": "Microsoft.VisualStudio.Azure.ETWTraceListenerService",
+    "version": "0.1.0.1"
+  },
+  {
+    "name": "VSETWTraceListenerService",
+    "publisher": "Microsoft.VisualStudio.Azure.ETWTraceListenerService",
+    "version": "0.2.0.0"
+  },
+  {
+    "name": "VSETWTraceListenerService",
+    "publisher": "Microsoft.VisualStudio.Azure.ETWTraceListenerService",
+    "version": "0.3.0.0"
+  },
+  {
+    "name": "VSETWTraceListenerService",
+    "publisher": "Microsoft.VisualStudio.Azure.ETWTraceListenerService",
+    "version": "0.4.0.0"
+  },
+  {
+    "name": "VSETWTraceListenerService",
+    "publisher": "Microsoft.VisualStudio.Azure.ETWTraceListenerService",
+    "version": "0.5.0.0"
+  },
+  {
+    "name": "VSETWTraceListenerService",
+    "publisher": "Microsoft.VisualStudio.Azure.ETWTraceListenerService",
+    "version": "0.6.0.0"
+  },
+  {
+    "name": "VSETWTraceListenerService",
+    "publisher": "Microsoft.VisualStudio.Azure.ETWTraceListenerService",
+    "version": "0.7.0.0"
+  },
+  {
+    "name": "VSETWTraceListenerService",
+    "publisher": "Microsoft.VisualStudio.Azure.ETWTraceListenerService",
+    "version": "0.7.1.0"
+  },
+  {
+    "name": "VSETWTraceListenerService",
+    "publisher": "Microsoft.VisualStudio.Azure.ETWTraceListenerService",
+    "version": "0.7.2.0"
+  },
+  {
+    "name": "VSETWTraceListenerService",
+    "publisher": "Microsoft.VisualStudio.Azure.ETWTraceListenerService",
+    "version": "0.7.3.0"
+  },
+  {
+    "name": "VSETWTraceListenerService",
+    "publisher": "Microsoft.VisualStudio.Azure.ETWTraceListenerService",
+    "version": "0.8.0.0"
+  },
+  {
+    "name": "VSETWTraceListenerService",
+    "publisher": "Microsoft.VisualStudio.Azure.ETWTraceListenerService",
+    "version": "1.0.0.0"
+  },
+  {
+    "name": "LinuxDiagnostic",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "2.0.9023"
+  },
+  {
+    "name": "LinuxDiagnostic",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "2.1.9023"
+  },
+  {
+    "name": "LinuxDiagnostic",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "2.2.9023"
+  },
+  {
+    "name": "LinuxDiagnostic",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "2.3.9023"
+  },
+  {
+    "name": "LinuxDiagnostic",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "2.3.9025"
+  },
+  {
+    "name": "LinuxDiagnostic",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "2.3.9027"
+  },
+  {
+    "name": "VSRemoteDebugger",
+    "publisher": "Microsoft.VisualStudio.Azure.RemoteDebug",
+    "version": "1.1.1.0"
+  },
+  {
+    "name": "VSRemoteDebugger",
+    "publisher": "Microsoft.VisualStudio.Azure.RemoteDebug",
+    "version": "1.1.2.0"
+  },
+  {
+    "name": "VSRemoteDebugger",
+    "publisher": "Microsoft.VisualStudio.Azure.RemoteDebug",
+    "version": "1.1.3.0"
+  },
+  {
+    "name": "ServiceProfilerAgent",
+    "publisher": "Microsoft.VisualStudio.ServiceProfiler",
+    "version": "0.1.0.24"
+  },
+  {
+    "name": "ServiceProfilerAgent",
+    "publisher": "Microsoft.VisualStudio.ServiceProfiler",
+    "version": "0.1.0.25"
+  },
+  {
+    "name": "Null",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.0.0.3"
+  },
+  {
+    "name": "Null",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.0.1.0"
+  },
+  {
+    "name": "Null",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.0.2.0"
+  },
+  {
+    "name": "Null",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.0.3.0"
+  },
+  {
+    "name": "Null",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.1.0.0"
+  },
+  {
+    "name": "Null",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.2.0.0"
+  },
+  {
+    "name": "Null",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.3.0.0"
+  },
+  {
+    "name": "Null",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "2.0.0.0"
+  },
+  {
+    "name": "TeamServicesAgent",
+    "publisher": "Microsoft.VisualStudio.Services",
+    "version": "1.11.0.0"
+  },
+  {
+    "name": "TeamServicesAgent",
+    "publisher": "Microsoft.VisualStudio.Services",
+    "version": "1.12.0.0"
+  },
+  {
+    "name": "TeamServicesAgent",
+    "publisher": "Microsoft.VisualStudio.Services",
+    "version": "1.13.0.0"
+  },
+  {
+    "name": "TeamServicesAgent",
+    "publisher": "Microsoft.VisualStudio.Services",
+    "version": "1.14.0.0"
+  },
+  {
+    "name": "AzureRemoteAppTestAgentV2",
+    "publisher": "Microsoft.Windows.AzureRemoteApp.Test",
+    "version": "1.0"
+  },
+  {
+    "name": "OSPatchingForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.0"
+  },
+  {
+    "name": "OSPatchingForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.0.1.1"
+  },
+  {
+    "name": "OSPatchingForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "2.0.0.0"
+  },
+  {
+    "name": "OSPatchingForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "2.0.0.1"
+  },
+  {
+    "name": "OSPatchingForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "2.0.0.2"
+  },
+  {
+    "name": "OSPatchingForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "2.0.0.5"
+  },
+  {
+    "name": "OSPatchingForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "2.1.0.0"
+  },
+  {
+    "name": "OSPatchingForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "2.2.0.0"
+  },
+  {
+    "name": "OSPatchingForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "2.3.0.1"
+  },
+  {
+    "name": "TeamServicesAgentLinux",
+    "publisher": "Microsoft.VisualStudio.Services",
+    "version": "1.10.0.0"
+  },
+  {
+    "name": "TeamServicesAgentLinux",
+    "publisher": "Microsoft.VisualStudio.Services",
+    "version": "1.11.0.0"
+  },
+  {
+    "name": "TeamServicesAgentLinux",
+    "publisher": "Microsoft.VisualStudio.Services",
+    "version": "1.12.0.0"
+  },
+  {
+    "name": "TeamServicesAgentLinux",
+    "publisher": "Microsoft.VisualStudio.Services",
+    "version": "1.13.0.0"
+  },
+  {
+    "name": "TeamServicesAgentLinux",
+    "publisher": "Microsoft.VisualStudio.Services",
+    "version": "1.9.0.0"
+  },
+  {
+    "name": "AzureLogCollector",
+    "publisher": "Microsoft.WindowsAzure.Compute",
+    "version": "1.0.0.7"
+  },
+  {
+    "name": "AzureLogCollector",
+    "publisher": "Microsoft.WindowsAzure.Compute",
+    "version": "1.0.0.8"
+  },
+  {
+    "name": "AzureLogCollector",
+    "publisher": "Microsoft.WindowsAzure.Compute",
+    "version": "1.0.0.9"
+  },
+  {
+    "name": "RDMAUpdateForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "0.1.0.9"
+  },
+  {
+    "name": "VMAccessForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.0"
+  },
+  {
+    "name": "VMAccessForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.1"
+  },
+  {
+    "name": "VMAccessForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.2"
+  },
+  {
+    "name": "VMAccessForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.3.0.1"
+  },
+  {
+    "name": "VMAccessForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.4.0.0"
+  },
+  {
+    "name": "VMAccessForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.4.1.0"
+  },
+  {
+    "name": "VMAccessForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.4.2.0"
+  },
+  {
+    "name": "VMAccessForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.4.3.0"
+  },
+  {
+    "name": "VMAccessForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.4.4.0"
+  },
+  {
+    "name": "VMAccessForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.4.5.0"
+  },
+  {
+    "name": "VMAccessForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.4.6.0"
+  },
+  {
+    "name": "VMAccessForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.4.7.0"
+  },
+  {
+    "name": "VMAccessForLinux",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "1.4.7.1"
+  },
+  {
+    "name": "VMBackupForLinuxExtension",
+    "publisher": "Microsoft.OSTCExtensions",
+    "version": "0.1.0.993"
+  },
+  {
+    "name": "OctopusDeployWindowsTentacle",
+    "publisher": "OctopusDeploy.Tentacle",
+    "version": "2.0.104"
+  },
+  {
+    "name": "OctopusDeployWindowsTentacle",
+    "publisher": "OctopusDeploy.Tentacle",
+    "version": "2.0.108"
+  },
+  {
+    "name": "OctopusDeployWindowsTentacle",
+    "publisher": "OctopusDeploy.Tentacle",
+    "version": "2.0.113"
+  },
+  {
+    "name": "OctopusDeployWindowsTentacle",
+    "publisher": "OctopusDeploy.Tentacle",
+    "version": "2.0.135"
+  },
+  {
+    "name": "OctopusDeployWindowsTentacle",
+    "publisher": "OctopusDeploy.Tentacle",
+    "version": "2.0.156"
+  },
+  {
+    "name": "OctopusDeployWindowsTentacle",
+    "publisher": "OctopusDeploy.Tentacle",
+    "version": "2.0.164"
+  },
+  {
+    "name": "PuppetAgent",
+    "publisher": "puppet",
+    "version": "1.4.2"
+  },
+  {
+    "name": "PuppetAgent",
+    "publisher": "puppet",
+    "version": "1.5.2"
+  },
+  {
+    "name": "PuppetEnterpriseAgent",
+    "publisher": "PuppetLabs",
+    "version": "2015.2.3"
+  },
+  {
+    "name": "PuppetEnterpriseAgent",
+    "publisher": "PuppetLabs",
+    "version": "2015.3.3"
+  },
+  {
+    "name": "PuppetEnterpriseAgent",
+    "publisher": "PuppetLabs",
+    "version": "3.2.1"
+  },
+  {
+    "name": "PuppetEnterpriseAgent",
+    "publisher": "PuppetLabs",
+    "version": "3.2.2"
+  },
+  {
+    "name": "PuppetEnterpriseAgent",
+    "publisher": "PuppetLabs",
+    "version": "3.2.3"
+  },
+  {
+    "name": "PuppetEnterpriseAgent",
+    "publisher": "PuppetLabs",
+    "version": "3.7.2"
+  },
+  {
+    "name": "PuppetEnterpriseAgent",
+    "publisher": "PuppetLabs",
+    "version": "3.8.4"
+  },
+  {
+    "name": "PuppetEnterpriseAgent",
+    "publisher": "PuppetLabs.Test",
+    "version": "3.8.4"
+  },
+  {
+    "name": "QualysAgent",
+    "publisher": "Qualys",
+    "version": "0.0.0.1"
+  },
+  {
+    "name": "QualysAgent",
+    "publisher": "Qualys",
+    "version": "0.0.0.3"
+  },
+  {
+    "name": "QualysAgent",
+    "publisher": "Qualys",
+    "version": "0.0.0.4"
+  },
+  {
+    "name": "QualysAgent",
+    "publisher": "Qualys",
+    "version": "0.0.0.5"
+  },
+  {
+    "name": "QualysAgent",
+    "publisher": "Qualys",
+    "version": "0.0.0.7"
+  },
+  {
+    "name": "QualysAgent",
+    "publisher": "Qualys",
+    "version": "0.0.0.8"
+  },
+  {
+    "name": "QualysAgent",
+    "publisher": "Qualys",
+    "version": "0.0.0.9"
+  },
+  {
+    "name": "QualysAgentLinux",
+    "publisher": "Qualys",
+    "version": "1.5.0.72"
+  },
+  {
+    "name": "QualysAgentLinux",
+    "publisher": "Qualys",
+    "version": "1.5.0.73"
+  },
+  {
+    "name": "QualysAgentLinux",
+    "publisher": "Qualys",
+    "version": "1.5.0.82"
+  },
+  {
+    "name": "QualysAgentLinux",
+    "publisher": "Qualys",
+    "version": "1.6.0.1"
+  },
+  {
+    "name": "QualysAgentLinux",
+    "publisher": "Qualys",
+    "version": "1.6.0.3"
+  },
+  {
+    "name": "QualysAgentLinux",
+    "publisher": "Qualys",
+    "version": "1.6.0.90"
+  },
+  {
+    "name": "QualysAgentLinux",
+    "publisher": "Qualys",
+    "version": "1.6.0.91"
+  },
+  {
+    "name": "QualysAgentLinux",
+    "publisher": "Qualys",
+    "version": "1.6.0.93"
+  },
+  {
+    "name": "QualysAgentLinux",
+    "publisher": "Qualys",
+    "version": "1.6.0.96"
+  },
+  {
+    "name": "InsightAgentLinux",
+    "publisher": "Rapid7.InsightPlatform",
+    "version": "2.0.0.2"
+  },
+  {
+    "name": "InsightAgentWindows",
+    "publisher": "Rapid7.InsightPlatform",
+    "version": "2.0.0.2"
+  },
+  {
+    "name": "Site24x7ApmInsightExtn",
+    "publisher": "Site24x7",
+    "version": "1.5.0.0"
+  },
+  {
+    "name": "Site24x7LinuxServerExtn",
+    "publisher": "Site24x7",
+    "version": "1.5.0.0"
+  },
+  {
+    "name": "Site24x7WindowsServerExtn",
+    "publisher": "Site24x7",
+    "version": "1.5.0.0"
+  },
+  {
+    "name": "Site24x7WindowsServerExtn",
+    "publisher": "Site24x7",
+    "version": "1.6.0.0"
+  },
+  {
+    "name": "StackifyLinuxAgentExtension",
+    "publisher": "Stackify.LinuxAgent.Extension",
+    "version": "1.0.0.16"
+  },
+  {
+    "name": "IaaSDiagnostics",
+    "publisher": "StatusReport.Diagnostics.Test",
+    "version": "0.27.0.0"
+  },
+  {
+    "name": "SymantecEndpointProtection",
+    "publisher": "Symantec",
+    "version": "12.1.4100.2"
+  },
+  {
+    "name": "SymantecEndpointProtection",
+    "publisher": "Symantec",
+    "version": "12.1.7007.6505"
+  },
+  {
+    "name": "SCWPAgentForLinux",
+    "publisher": "Symantec.CloudWorkloadProtection",
+    "version": "1.2.0.0"
+  },
+  {
+    "name": "SCWPAgentForLinux",
+    "publisher": "Symantec.CloudWorkloadProtection",
+    "version": "1.3.0.0"
+  },
+  {
+    "name": "SCWPAgentForLinux",
+    "publisher": "Symantec.CloudWorkloadProtection",
+    "version": "1.4.0.0"
+  },
+  {
+    "name": "SCWPAgentForLinux",
+    "publisher": "Symantec.CloudWorkloadProtection",
+    "version": "1.5.0.0"
+  },
+  {
+    "name": "SCWPAgentForWindows",
+    "publisher": "Symantec.CloudWorkloadProtection",
+    "version": "1.3.0.0"
+  },
+  {
+    "name": "SCWPAgentForWindows",
+    "publisher": "Symantec.CloudWorkloadProtection",
+    "version": "1.4.0.0"
+  },
+  {
+    "name": "TeamServicesAgentLinux1",
+    "publisher": "Test.Microsoft.VisualStudio.Services",
+    "version": "1.0.0.0"
+  },
+  {
+    "name": "TrendMicroDSA",
+    "publisher": "Test.TrendMicro.DeepSecurity",
+    "version": "10.0.0.10705"
+  },
+  {
+    "name": "TrendMicroDSA",
+    "publisher": "Test.TrendMicro.DeepSecurity",
+    "version": "10.0.0.10801"
+  },
+  {
+    "name": "TrendMicroDSA",
+    "publisher": "Test.TrendMicro.DeepSecurity",
+    "version": "10.0.0.10901"
+  },
+  {
+    "name": "TrendMicroDSA",
+    "publisher": "Test.TrendMicro.DeepSecurity",
+    "version": "10.0.0.11001"
+  },
+  {
+    "name": "TrendMicroDSA",
+    "publisher": "Test.TrendMicro.DeepSecurity",
+    "version": "9.6.2.11301"
+  },
+  {
+    "name": "TrendMicroDSALinux",
+    "publisher": "Test.TrendMicro.DeepSecurity",
+    "version": "10.0.0.10601"
+  },
+  {
+    "name": "TrendMicroDSALinux",
+    "publisher": "Test.TrendMicro.DeepSecurity",
+    "version": "10.0.0.10701"
+  },
+  {
+    "name": "TrendMicroDSALinux",
+    "publisher": "Test.TrendMicro.DeepSecurity",
+    "version": "9.6.2.11401"
+  },
+  {
+    "name": "PortalProtectExtension",
+    "publisher": "TrendMicro.PortalProtect",
+    "version": "2.1"
+  },
+  {
+    "name": "TrendMicroDSA",
+    "publisher": "TrendMicro.DeepSecurity",
+    "version": "10.0.0.105"
+  },
+  {
+    "name": "TrendMicroDSA",
+    "publisher": "TrendMicro.DeepSecurity",
+    "version": "10.0.0.107"
+  },
+  {
+    "name": "TrendMicroDSA",
+    "publisher": "TrendMicro.DeepSecurity",
+    "version": "9.6.2.113"
+  },
+  {
+    "name": "TrendMicroDSALinux",
+    "publisher": "TrendMicro.DeepSecurity",
+    "version": "10.0.0.104"
+  },
+  {
+    "name": "TrendMicroDSALinux",
+    "publisher": "TrendMicro.DeepSecurity",
+    "version": "10.0.0.106"
+  },
+  {
+    "name": "TrendMicroDSALinux",
+    "publisher": "TrendMicro.DeepSecurity",
+    "version": "9.6.2.114"
+  },
+  {
+    "name": "VormetricTransparentEncryptionAgent",
+    "publisher": "Vormetric",
+    "version": "5.2.339.0"
+  },
+  {
+    "name": "IaaSDiagnostics",
+    "publisher": "WAD2EventHub.Diagnostics.Test",
+    "version": "0.1.0.0"
+  },
+  {
+    "name": "IaaSDiagnostics",
+    "publisher": "WAD2AI.Diagnostics.Test",
+    "version": "0.23.0.0"
+  }
+]

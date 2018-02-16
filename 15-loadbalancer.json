@@ -20,7 +20,8 @@
 			"networkSecurityGroups": "2017-06-01",
 			"virtualNetworks": "2017-08-01",
 			"networkInterfaces": "2016-09-01",
-			"virtualMachines": "2017-03-30"
+			"virtualMachines": "2017-03-30",
+			"loadBalancers": "2017-10-01"
 		},
 		"vm": {
 			"os": {
@@ -34,7 +35,7 @@
 			},
 			"size": {
 				"jumphost": "Basic_A1",
-				"frontend": "Basic_A1"
+				"frontend": "Standard_A1"
 			}
 		},
 		"vnet": {
@@ -242,13 +243,11 @@
 				"displayName": "PublicIP Jumphost"
 			},
 			"location": "[resourceGroup().location]",
-			"sku": {
-				"name": "Standard"
-			},
+			"sku": { "name": "Standard" },
 			"properties": {
 				"publicIPAllocationMethod": "Static",
 				"idleTimeoutInMinutes": 30,
-				"publicIpAddressVersion": 4,
+				"publicIpAddressVersion": "IPv4",
 				"dnsSettings": {
 					"domainNameLabel": "[concat(variables('deploymentName'), '-ssh')]"
 				}
@@ -293,6 +292,9 @@
 			"dependsOn": [ 
 				"[concat('Microsoft.Network/networkInterfaces/', concat(variables('deploymentName'), '-nic-jumphost'))]" 
 			],
+			"tags": {
+				"displayName": "VM Jumphost"
+			},
 			"properties": {
 				"networkProfile": { "networkInterfaces": [ { "id": "[resourceId('Microsoft.Network/networkInterfaces', concat(variables('deploymentName'), '-nic-jumphost'))]" } ] },
 				"osProfile": {
@@ -327,9 +329,6 @@
 				}
 			}
 		},
-
-
-
 		{
 			"type": "Microsoft.Network/publicIPAddresses",
 			"apiVersion": "[variables('apiVersion').publicIPAddresses]",
@@ -342,7 +341,7 @@
 			"properties": {
 				"publicIPAllocationMethod": "Static",
 				"idleTimeoutInMinutes": 4,
-				"publicIpAddressVersion": 4,
+				"publicIpAddressVersion": "IPv4",
 				"dnsSettings": {
 					"domainNameLabel": "[concat(variables('deploymentName'), '-www')]"
 				}
@@ -352,7 +351,7 @@
 			"type": "Microsoft.Network/loadBalancers",
 			"name": "[concat(variables('deploymentName'), '-nlb-frontend')]",
 			"location": "[resourceGroup().location]",
-			"apiVersion": "[variables('apiVersions').loadBalancers]",
+			"apiVersion": "[variables('apiVersion').loadBalancers]",
 			"tags": {
 				"displayName": "Load Balancer Frontend"
 			},
@@ -360,6 +359,7 @@
 				"[concat('Microsoft.Network/virtualNetworks/', concat(variables('deploymentName'), '-vnet'))]",
 				"[concat('Microsoft.Network/publicIPAddresses/', concat(variables('deploymentName'), '-publicip-frontend-loadbalancer'))]"
 			],
+			"sku": { "name": "Standard" },
 			"properties": {
 				"frontendIPConfigurations": [
 					{
@@ -376,13 +376,12 @@
 				],
 				"probes": [
 					{
-						"name": "probe-http",
+						"name": "probe-80",
 						"properties": {
-							"protocol": "Http",
+							"protocol": "Tcp",
 							"port": 80,
 							"intervalInSeconds": 5,
-							"numberOfProbes": 2,
-							"requestPath": "/"
+							"numberOfProbes": 2
 						}
 					}
 				],
@@ -395,9 +394,9 @@
 							"backendPort": 80,
 							"enableFloatingIP": false,
 							"idleTimeoutInMinutes": 5,
-							"probe": { "id": "[concat(resourceId('Microsoft.Network/loadBalancers', concat(variables('deploymentName'), '-nlb-frontend')), '/probes/', 'probe-http')]" },
+							"probe": { "id": "[concat(resourceId('Microsoft.Network/loadBalancers', concat(variables('deploymentName'), '-nlb-frontend')), '/probes/', 'probe-80')]" },
 							"frontendIPConfiguration": { "id": "[concat(resourceId('Microsoft.Network/loadBalancers', concat(variables('deploymentName'), '-nlb-frontend')), '/frontendIPConfigurations/', 'myLoadBalancerFrontEnd')]" },
-							"backendAddressPool": { "id": "[concat(resourceId('Microsoft.Network/loadBalancers', concat(variables('deploymentName'), '-nlb-frontend')), '/backendAddressPools/', 'myBackendAddressPool')]" }
+							"backendAddressPool": { "id": "[concat(resourceId('Microsoft.Network/loadBalancers', concat(variables('deploymentName'), '-nlb-frontend')), '/backendAddressPools/', 'backendAddressPool')]" }
 						}
 					}
 				]
@@ -413,7 +412,8 @@
 				"count": "[variables('vm').count.frontend]"
 			},
 			"dependsOn": [
-				"[concat('Microsoft.Network/virtualNetworks/', concat(variables('deploymentName'), '-vnet'))]"
+				"[concat('Microsoft.Network/virtualNetworks/', concat(variables('deploymentName'), '-vnet'))]",
+				"[concat('Microsoft.Network/loadBalancers/', concat(variables('deploymentName'), '-nlb-frontend'))]"
 			],
 			"tags": {
 				"displayName": "NIC Frontend"
@@ -449,6 +449,9 @@
 			"dependsOn": [ 
 				"[concat('Microsoft.Network/networkInterfaces/', concat(variables('deploymentName'), '-nic-frontend-', string(copyIndex())))]" 
 			],
+			"tags": {
+				"displayName": "VM Frontend"
+			},
 			"properties": {
 				"networkProfile": { "networkInterfaces": [ { "id": "[resourceId('Microsoft.Network/networkInterfaces', concat(variables('deploymentName'), '-nic-frontend-', string(copyIndex())))]" } ] },
 				"osProfile": {
@@ -480,6 +483,32 @@
 						"diskSizeGB": 32,
 						"managedDisk": { "storageAccountType": "Standard_LRS" }
 					}
+				}
+			}
+		},
+		{
+			"type": "Microsoft.Compute/virtualMachines/extensions",
+			"copy": {
+				"name": "vm-frontend-script-extension-copy",
+				"count": "[variables('vm').count.frontend]"
+			},
+			"name": "[concat(concat(variables('deploymentName'), '-vm-frontend-', string(copyIndex())), '/customScriptForLinux')]",
+			"location": "[resourceGroup().location]",
+			"apiVersion": "2015-06-15",
+			"dependsOn": [
+				"[concat('Microsoft.Compute/virtualMachines/', concat(variables('deploymentName'), '-vm-frontend-', string(copyIndex())))]"
+			],
+			"tags": {
+				"displayName": "Custom Script Extension Frontend"
+			},
+			"properties": {
+				"publisher": "Microsoft.OSTCExtensions",
+				"type": "CustomScriptForLinux",
+				"typeHandlerVersion": "1.5.2.2",
+				"autoUpgradeMinorVersion": true,
+				"settings": {
+					"fileUris": [ ],
+					"commandToExecute": "zypper install apache"
 				}
 			}
 		}
