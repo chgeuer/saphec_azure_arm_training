@@ -156,7 +156,7 @@
 			"apiVersion": "2016-04-30-preview",
 			"location": "[resourceGroup().location]",
 			"dependsOn": [ 
-				"[concat('Microsoft.Network/networkInterfaces/', concat(variables('deploymentName'), '-nic-jumphost'))]" 
+				"[concat('Microsoft.Network/networkInterfaces/', concat(variables('deploymentName'), '-nic-diag'))]" 
 			],
 			"tags": { "displayName": "Diagnostics VM" },
 			"properties": {
@@ -186,7 +186,7 @@
 					},
 					"osDisk": {
 						"createOption": "FromImage",
-						"name": "[concat(variables('deploymentName'), '-vm-jumphost-osdisk')]",
+						"name": "[concat(variables('deploymentName'), '-vm-diag-osdisk')]",
 						"diskSizeGB": 32,
 						"managedDisk": { "storageAccountType": "Standard_LRS" }
 					}, 
