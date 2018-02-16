@@ -4,7 +4,7 @@
 	"parameters": {
 		"deploymentName": {
 			"type": "string",
-			"defaultValue": "chgeuer123"
+			"defaultValue": "chgeuerfe"
 		},
 		"adminSshKey": {
 			"type": "string",
@@ -119,6 +119,20 @@
 							"destinationAddressPrefix": "[variables('vnet').addresses.subnet.frontend]",
 							"destinationPortRange": "443"
 						}
+					},
+					{
+						"name": "tcp-in-from-jumphost",
+						"properties": {
+							"priority": 102,
+							"description": "Allow TCP/* Inbound from jumphost",
+							"access": "Allow",
+							"direction": "Inbound",
+							"protocol": "Tcp",
+							"sourceAddressPrefix": "[variables('vnet').addresses.subnet.jumphost]",
+							"sourcePortRange": "*",
+							"destinationAddressPrefix": "[variables('vnet').addresses.subnet.frontend]",
+							"destinationPortRange": "*"
+						}
 					}
 				]
 			}
@@ -145,6 +159,20 @@
 							"sourcePortRange": "*",
 							"destinationAddressPrefix": "[variables('vnet').addresses.subnet.database]",
 							"destinationPortRange": "80"
+						}
+					},
+					{
+						"name": "tcp-in-from-jumphost",
+						"properties": {
+							"priority": 102,
+							"description": "Allow TCP/* Inbound from jumphost",
+							"access": "Allow",
+							"direction": "Inbound",
+							"protocol": "Tcp",
+							"sourceAddressPrefix": "[variables('vnet').addresses.subnet.jumphost]",
+							"sourcePortRange": "*",
+							"destinationAddressPrefix": "[variables('vnet').addresses.subnet.frontend]",
+							"destinationPortRange": "*"
 						}
 					}
 				]
@@ -328,6 +356,52 @@
 						}
 					}
 				]
+			}
+		},
+		{
+			"name": "[concat(variables('deploymentName'), '-vm-frontend-', string(copyIndex()))]",
+			"type": "Microsoft.Compute/virtualMachines",
+			"apiVersion": "[variables('apiVersion').virtualMachines]",
+			"location": "[resourceGroup().location]",
+			"copy": {
+				"name": "vm-frontend-copy",
+				"count": "[variables('vm').count.frontend]"
+			},
+			"dependsOn": [ 
+				"[concat('Microsoft.Network/networkInterfaces/', concat(variables('deploymentName'), '-nic-frontend-', string(copyIndex())))]" 
+			],
+			"properties": {
+				"networkProfile": { "networkInterfaces": [ { "id": "[resourceId('Microsoft.Network/networkInterfaces', concat(variables('deploymentName'), '-nic-frontend-', string(copyIndex())))]" } ] },
+				"osProfile": {
+					"computerName": "[concat(variables('deploymentName'), '-vm-frontend-', string(copyIndex()))]",
+					"adminUsername": "[variables('adminUserName')]",
+					"linuxConfiguration": {
+						"disablePasswordAuthentication": true,
+						"ssh": {
+							"publicKeys": [
+								{
+									"path": "[concat('/home/', variables('adminUserName'), '/.ssh/authorized_keys')]",
+									"keyData": "[variables('adminSshKey')]"
+								}
+							]
+						}
+					}
+				},
+				"hardwareProfile": { "vmSize": "[variables('vm').size.frontend]" },
+				"storageProfile": {
+					"imageReference": {
+						"publisher": "[variables('vm').os.publisher]",
+						"offer": "[variables('vm').os.offer]",
+						"sku": "[variables('vm').os.sku]",
+						"version": "[variables('vm').os.version]"
+					},
+					"osDisk": {
+						"createOption": "FromImage",
+						"name": "[concat(variables('deploymentName'), '-vm-frontend-osdisk-', string(copyIndex()))]",
+						"diskSizeGB": 32,
+						"managedDisk": { "storageAccountType": "Standard_LRS" }
+					}
+				}
 			}
 		}
 	]
