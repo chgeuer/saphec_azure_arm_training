@@ -510,7 +510,7 @@
 					"fileUris": [ 
 						"https://raw.githubusercontent.com/chgeuer/saphec_azure_arm_training/master/scripts/install-apache.sh"
 					],
-					"commandToExecute": "install-apache.sh"
+					"commandToExecute": "./install-apache.sh"
 				}
 			}
 		}
