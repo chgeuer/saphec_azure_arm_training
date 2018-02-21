@@ -1,0 +1,1 @@
+terraform apply  -var "azure_subscription_id=%AZURE_PACKER_SUBSCRIPTION_ID%" -var "azure_client_id=%AZURE_PACKER_APPID%" -var "azure_client_secret=%AZURE_PACKER_PASSWORD%" -var "azure_tenant_id=%AZURE_PACKER_TENANTID%"
