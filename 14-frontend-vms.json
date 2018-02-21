@@ -34,7 +34,7 @@
 			},
 			"size": {
 				"jumphost": "Basic_A1",
-				"frontend": "Basic_A1"
+				"frontend": "Standard_A1"
 			}
 		},
 		"vnet": {
