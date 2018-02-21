@@ -27,6 +27,7 @@
 
 ## Compute
 
+- [VM Types](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes)
 - [Maintenance and Upgrades](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/maintenance-and-updates)
 - [Handling planned maintenance notifications](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/maintenance-notifications)
 - [Instance Metadata](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/instance-metadata-service)

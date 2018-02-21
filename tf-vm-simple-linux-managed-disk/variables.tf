@@ -4,7 +4,7 @@ variable "resource_group" {
 
 variable "rg_prefix" {
   description = "The shortened abbreviation to represent your resource group that will go on the front of some resources."
-  default     = "rg"
+  default     = "tfrg"
 }
 
 variable "hostname" {
@@ -17,7 +17,7 @@ variable "dns_name" {
 
 variable "location" {
   description = "The location/region where the virtual network is created. Changing this forces a new resource to be created."
-  default     = "europewest"
+  default     = "westeurope"
 }
 
 variable "virtual_network_name" {

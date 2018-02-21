@@ -50,13 +50,6 @@ resource "azurerm_public_ip" "pip" {
   domain_name_label            = "${var.dns_name}"
 }
 
-resource "azurerm_storage_account" "stor" {
-  name                = "${var.dns_name}stor"
-  location            = "${var.location}"
-  resource_group_name = "${azurerm_resource_group.rg.name}"
-  account_type        = "${var.storage_account_type}"
-}
-
 resource "azurerm_managed_disk" "datadisk" {
   name                 = "${var.hostname}-datadisk"
   location             = "${var.location}"
@@ -104,10 +97,5 @@ resource "azurerm_virtual_machine" "vm" {
 
   os_profile_linux_config {
     disable_password_authentication = false
-  }
-
-  boot_diagnostics {
-    enabled     = true
-    storage_uri = "${azurerm_storage_account.stor.primary_blob_endpoint}"
   }
 }
