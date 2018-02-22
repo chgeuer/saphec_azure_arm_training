@@ -24,6 +24,11 @@
   - Disks versus Images
   - [Importing VHDs from on-prem](https://github.com/chgeuer/azure-opensuse-packer-distribution)
   - Managed versus Unmanaged ([blog](http://blog.geuer-pollmann.de/blog/2015/09/15/vm-ha-in-arm-needs-more-than-availabilitysets/))
+  - Blobs, Files, Tables, Queues
+  - Blob Types: 
+    - Page Blobs (VHDs), 
+    - Block Blobs (ISO, JPEG)
+    - Append Blobs
 - [Standard storage](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/standard-storage) versus [Premium Storage](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/premium-storage)
 - [Azure Managed Disks Overview](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/managed-disks-overview)
   - [Managed Disks Sizes](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/managed-disks-overview#pricing-and-billing)
