@@ -8,7 +8,8 @@
 		},
 		"adminSshKey": {
 			"type": "string",
-			"defaultValue": "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAk/ViUPrGp7KoJLuN2PgofgMyw7SN9zfLYFDDR0TRYa8cOvJlE8NdZYt6Oqa4aL/fslKr9bmlMCdawhZRL7sHccIIS0I0zG7iD15rQL3/Y5aZOf3ML+bebpSj+SE5OeHT9iobgsYpK8gq72d8tmZZAfKhx6fRJsgC2j2xXH/GveoZ5GkHnhJUYuYPmNjEb/PK7LT43XuP+E9Rderr3LPUTuBeGVW9do0HS7X8I2uTn0+BqgkZLOO4FCnSXxh1u6fuD++ZgOZVmB6Q1xEdHSA7LLnPkjDZqbWezLIh5cSdNPUW2JG7tMxQTAZzVoNMb6vAVsfslB16rqZQ21EdIq+0pw== chgeuer-dcos-1"
+			"defaultValue": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCmxyqj/VPDopwy9rhJr4FLpH90FbV/cEOXhLS5bZJjxayMzGYkvX4sPorMyALOLr5CGMNFKHvRUJjMaTLLfVqQi+PXOs72JyfxWjdCo8l9dqcXGtpz/EcDkvAhbNqWNO8XZl9a5yhEAWRgpUXLGjglAiPmTaWP4Enlrc3NhuUBPfDVjCDvUy3RvWyGp+g22wwz2kDm2U3oPeqLeoAXF0+VcmCvRZeEDvffgX8VVnbRpNPnB+IcUPojf/n8zuRv3QduTfHl+mmDhPqAzNmjLd6gw+KUQtclgqzyENQSQuA+5wReaORFcMd1tJN4KZ+2rIJcXM0/aNywq13nS8CalydT demo
+			"
 		}
 	},
 	"variables": {
@@ -30,7 +31,7 @@
 				"version": "latest"
 			},
 			"count": {
-				"frontend": 2
+				"frontend": 4
 			},
 			"size": {
 				"jumphost": "Basic_A1",
