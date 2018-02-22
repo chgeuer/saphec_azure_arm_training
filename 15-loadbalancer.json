@@ -12,7 +12,7 @@
 		}
 	},
 	"variables": {
-		"adminUserName": "chgeuer",
+		"adminUserName": "hecadm",
 		"adminSshKey": "[parameters('adminSshKey')]",
 		"deploymentName": "[parameters('deploymentName')]",
 		"apiVersion": {
