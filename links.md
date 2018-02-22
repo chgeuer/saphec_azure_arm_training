@@ -18,6 +18,12 @@
 
 ## Storage
 
+- Dimensions to consider
+  - Performance: "Standard" (HDD) versus "Premium" (SSD)
+  - Redundancy: "Locally redundant" (LRS), "Geo-Redundant" (GRS), "Geo-redundant with read access" (GRS-RA)
+  - Disks versus Images
+  - [Importing VHDs from on-prem](https://github.com/chgeuer/azure-opensuse-packer-distribution)
+  - Managed versus Unmanaged ([blog](http://blog.geuer-pollmann.de/blog/2015/09/15/vm-ha-in-arm-needs-more-than-availabilitysets/))
 - [Standard storage](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/standard-storage) versus [Premium Storage](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/premium-storage)
 - [Azure Managed Disks Overview](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/managed-disks-overview)
   - [Managed Disks Sizes](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/managed-disks-overview#pricing-and-billing)
@@ -60,3 +66,4 @@
 - [Enforce certain tags like cost center on VMs](https://docs.microsoft.com/en-us/azure/azure-policy/scripts/billing-tags-policy-init) / [video](https://channel9.msdn.com/Shows/Tuesdays-With-Corey/Corey-is-all-in-on-Azure-Policy)
 
 - [SAP HANA on Azure operations guide](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/hana-vm-operations#basic-setup-considerations)
+
