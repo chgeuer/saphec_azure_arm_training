@@ -9,7 +9,7 @@
 	},
 	"variables": {
 		"apiVersion": {
-			"publicIPAddresses": "2017-08-01"
+			"publicIPAddresses": "2017-10-01"
 		},
 		"ipName": "[concat(parameters('deploymentName'), '-ip')]",
 		"domainNameLabel": "[concat(parameters('deploymentName'), '-dns')]"

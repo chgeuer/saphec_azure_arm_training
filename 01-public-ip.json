@@ -5,17 +5,17 @@
 		{
 			"type": "Microsoft.Network/publicIPAddresses",
 			"apiVersion": "2017-08-01",
-			"name": "someip",
+			"name": "christianip1",
 			"location": "westeurope",
 			"sku": {
 				"name": "Basic"
 			},
 			"properties": {
 				"publicIPAllocationMethod": "Dynamic",
-				"idleTimeoutInMinutes": 4,
+				"idleTimeoutInMinutes": 30,
 				"publicIpAddressVersion": 4,
 				"dnsSettings": {
-					"domainNameLabel": "chgeuertest1"
+					"domainNameLabel": "chgeuerwalldorf"
 				}
 			}
 		}

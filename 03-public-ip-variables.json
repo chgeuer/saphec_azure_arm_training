@@ -15,10 +15,13 @@
 			"defaultValue": "chgeuertest1"
 		}
 	},
+	"variables": {
+		"publicIPAddressesAPIVersion": "2017-08-01"
+	},
 	"resources": [
 		{
 			"type": "Microsoft.Network/publicIPAddresses",
-			"apiVersion": "2017-08-01",
+			"apiVersion": "[variables('publicIPAddressesAPIVersion')]",
 			"name": "[parameters('ipName')]",
 			"location": "[parameters('location')]",
 			"sku": {

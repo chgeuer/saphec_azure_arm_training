@@ -54,3 +54,9 @@
   - [ARM Language](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates)
   - [ARM Functions](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-functions)
   - [private deployments](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-cli-sas-token)
+
+## misc
+
+- [Enforce certain tags like cost center on VMs](https://docs.microsoft.com/en-us/azure/azure-policy/scripts/billing-tags-policy-init) / [video](https://channel9.msdn.com/Shows/Tuesdays-With-Corey/Corey-is-all-in-on-Azure-Policy)
+
+- [SAP HANA on Azure operations guide](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/hana-vm-operations#basic-setup-considerations)
