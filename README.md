@@ -76,3 +76,5 @@ az group deployment create \
 
 - list all resource groups: `az group list | jq '.[] | .location + " - " + .name'`
 - list VM sizes: `az vm list-sizes --location westeurope | jq -r .[].name`
+
+
