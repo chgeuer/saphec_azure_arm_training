@@ -24,7 +24,7 @@
 				"name": "Basic"
 			},
 			"properties": {
-				"publicIPAllocationMethod": "Dynamic",
+				"publicIPAllocationMethod": "Static",
 				"idleTimeoutInMinutes": 4,
 				"publicIpAddressVersion": 4,
 				"dnsSettings": {
@@ -32,5 +32,11 @@
 				}
 			}
 		}
-	]
+	], 
+	"outputs": {
+		"ipaddress": {
+			"type": "string",
+			"value": "[reference(concat('Microsoft.Network/publicIPAddresses/', variables('ipName')), '2016-03-30').dnsSettings.fqdn]"
+		}
+	}
 }
