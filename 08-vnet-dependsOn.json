@@ -77,7 +77,10 @@
 					{
 						"name": "[concat(variables('deploymentName'), '-subnet-jumphost')]",
 						"properties": {
-							"addressPrefix": "[variables('vnet').addresses.subnet.jumphost]"
+							"addressPrefix": "[variables('vnet').addresses.subnet.jumphost]",
+							"networkSecurityGroup": {
+								"id": "[resourceId('Microsoft.Network/networkSecurityGroups', concat(variables('deploymentName'), '-nsg-jumphost'))]"
+							}
 						}
 					}
 				]
