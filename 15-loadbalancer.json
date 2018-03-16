@@ -245,7 +245,7 @@
 			"location": "[resourceGroup().location]",
 			"sku": { "name": "Standard" },
 			"properties": {
-				"publicIPAllocationMethod": "Dynamic",
+				"publicIPAllocationMethod": "Static",
 				"idleTimeoutInMinutes": 30,
 				"publicIpAddressVersion": "IPv4",
 				"dnsSettings": {
@@ -339,7 +339,7 @@
 			"location": "[resourceGroup().location]",
 			"sku": { "name": "Standard" },
 			"properties": {
-				"publicIPAllocationMethod": "Dynamic",
+				"publicIPAllocationMethod": "Static",
 				"idleTimeoutInMinutes": 4,
 				"publicIpAddressVersion": "IPv4",
 				"dnsSettings": {
