@@ -3,16 +3,14 @@
 	"contentVersion": "1.0.0.0",
 	"parameters": {
 		"deploymentName": {
-			"type": "string",
-			"defaultValue": "chgeuer123"
+			"type": "string"
 		}, 
 		"ipAddressSKU": {
 			"type": "string",
 			"allowedValues": [
 				"Basic",
 				"Standard"
-			], 
-			"defaultValue": "Basic"
+			]
 		}
 	},
 	"variables": {

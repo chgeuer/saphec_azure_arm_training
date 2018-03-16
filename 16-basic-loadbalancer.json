@@ -247,9 +247,9 @@
 				"displayName": "PublicIP Jumphost"
 			},
 			"location": "[resourceGroup().location]",
-			"sku": { "name": "Standard" },
+			"sku": { "name": "Basic" },
 			"properties": {
-				"publicIPAllocationMethod": "Static",
+				"publicIPAllocationMethod": "Dynamic",
 				"idleTimeoutInMinutes": 30,
 				"publicIpAddressVersion": "IPv4",
 				"dnsSettings": {
@@ -341,9 +341,9 @@
 				"displayName": "PublicIP Web Frontend"
 			},
 			"location": "[resourceGroup().location]",
-			"sku": { "name": "Standard" },
+			"sku": { "name": "Basic" },
 			"properties": {
-				"publicIPAllocationMethod": "Static",
+				"publicIPAllocationMethod": "Dynamic",
 				"idleTimeoutInMinutes": 4,
 				"publicIpAddressVersion": "IPv4",
 				"dnsSettings": {
@@ -363,7 +363,7 @@
 				"[concat('Microsoft.Network/virtualNetworks/', concat(variables('deploymentName'), '-vnet'))]",
 				"[concat('Microsoft.Network/publicIPAddresses/', concat(variables('deploymentName'), '-publicip-frontend-loadbalancer'))]"
 			],
-			"sku": { "name": "Standard" },
+			"sku": { "name": "Basic" },
 			"properties": {
 				"frontendIPConfigurations": [
 					{

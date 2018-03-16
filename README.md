@@ -58,6 +58,7 @@ az group deployment create \
 - [deploy #13-diagnostics-vm](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchgeuer%2Fsaphec_azure_arm_training%2Fmaster%2F13-diagnostics-vm.json)
 - [deploy #14-frontend-vms](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchgeuer%2Fsaphec_azure_arm_training%2Fmaster%2F14-frontend-vms.json)
 - [deploy #15-loadbalancer](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchgeuer%2Fsaphec_azure_arm_training%2Fmaster%2F15-loadbalancer.json)
+- [deploy #16-basic-loadbalancer](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchgeuer%2Fsaphec_azure_arm_training%2Fmaster%2F16-basic-loadbalancer.json)
 
 ## Links
 
