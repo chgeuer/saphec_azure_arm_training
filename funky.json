@@ -1,0 +1,44 @@
+ {
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": { },
+    "variables": {
+        "count": {
+            "rw": 1,
+            "r": 3
+        },
+        "data": {
+            "rw": ["rw","rw","rw","rw","rw","rw","rw","rw","rw","rw","rw","rw","rw","rw","rw","rw"],
+            "r": ["r","r","r","r","r","r","r","r","r","r","r","r","r","r","r","r"]
+        },
+        "disk_cache": {
+            "length": "[add(variables('count').rw, variables('count').r)]",
+            "settings": "[concat(take(variables('data').rw, variables('count').rw), take(variables('data').r, variables('count').r))]"
+        }
+    },
+    "resources": [
+        {
+            "copy": { "name": "datadisk-copy", "count": "[variables('disk_cache').length]" },
+            "name": "[concat('chgeuerip-lun', copyIndex(), '-cache-', variables('disk_cache').settings[copyIndex()])]",
+            "type": "Microsoft.Network/publicIPAddresses",
+            "apiVersion": "2017-08-01",
+            "location": "[resourceGroup().location]",
+            "sku": { "name": "Basic" },
+            "properties": { "publicIPAllocationMethod": "Dynamic" }
+        }
+    ],
+    "outputs": {
+        "disk_cache_length": {
+            "type": "int",
+            "value": "[variables('disk_cache').length]"
+        },
+        "disk_cache_settings_as_string": {
+            "type": "string",
+            "value": "[string(variables('disk_cache'))]"
+        },
+        "disk_cache_settings_as_array": {
+            "type": "array",
+            "value": "[variables('disk_cache').settings]"
+        }
+    }
+}
