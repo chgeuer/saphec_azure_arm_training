@@ -66,6 +66,7 @@ az group deployment create \
 - https://resources.azure.com/
 - https://shell.azure.com/
 - https://github.com/azure/azure-quickstart-templates/
+- http://blog.geuer-pollmann.de/blog/2019/02/28/call-azure-arm-api-with-curl/
 
 ## Docs
 
@@ -76,6 +77,9 @@ az group deployment create \
 ## Command line inspiration
 
 - list all resource groups: `az group list | jq '.[] | .location + " - " + .name'`
-- list VM sizes: `az vm list-sizes --location westeurope | jq -r .[].name`
+### list VM sizes
 
+```bash
+az vm list-sizes --location westeurope | jq -r .[].name
+```
 
