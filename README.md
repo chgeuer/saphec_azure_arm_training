@@ -68,6 +68,21 @@ az group deployment create \
 - https://github.com/azure/azure-quickstart-templates/
 - http://blog.geuer-pollmann.de/blog/2019/02/28/call-azure-arm-api-with-curl/
 
+- Course: Build ARM templates: https://aka.ms/armlearn
+- Course: Control and organize Azure resources: https://aka.ms/controlarm
+- Docs: Define resources in ARM: https://aka.ms/armdocsbd
+- Azure DevOps Youtube Channel
+  1. Introduction https://www.youtube.com/watch?v=VWe-stknCIM
+  2. create your first template https://www.youtube.com/watch?v=YqoiR5HDhSo
+  3. parameters https://www.youtube.com/watch?v=uYRLVx1bfZU
+  4. template functions https://www.youtube.com/watch?v=n4WPf6F2oto
+  5. variables https://www.youtube.com/watch?v=SvmdPNVcF_A
+  6. template output https://www.youtube.com/watch?v=T-GnsabXcGY
+  7. controlling deployment https://www.youtube.com/watch?v=Bl_gcsdnAH4
+  8. Linked and nested https://www.youtube.com/watch?v=rUY7wmz0W10
+  9. Loops https://www.youtube.com/watch?v=hEcFfXJNgeE
+- ARM Template Masterclass from an MVP: https://www.youtube.com/playlist?list=PLeh9xH-kbPPY9aXCmZfvh1l3lYn3R4PLu
+
 ## Docs
 
 - [ARM Language](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates)
